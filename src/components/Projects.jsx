@@ -33,8 +33,8 @@ const Wrapper = styled.div`
 width: 100vw;
 position: relative;
 z-index: 2;
-
 background-color:#8d64e0;
+margin-bottom: -10px ;
 
 
 
@@ -79,7 +79,7 @@ user-select: none;
   text-align: center;
   position: relative;
   width: 100vw;
-  margin: 100px 0;
+  margin-top: 100px;
   z-index:20;
 }
 `

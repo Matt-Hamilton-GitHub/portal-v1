@@ -3,7 +3,7 @@ import styled from 'styled-components'
 
 export const SingleProject = ({item}) => {
 
-    const {id, name, url,img, desc , tags} = item;
+    const { name, url,img, desc , tags} = item;
 
   return (
     <Wrapper>
