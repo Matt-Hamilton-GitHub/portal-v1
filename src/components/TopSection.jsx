@@ -19,7 +19,7 @@ function TopSection() {
   return (
     <Wrapper>
         <div className="main-top-div">
-            <div className="left-div">
+        <div className="left-div">
                 <div className="upper-triangle">
                 {/* <video playsInline src={profileVideo}/> */}
                 <div className="profile-logo">
@@ -76,24 +76,29 @@ display: flex;
 position: relative;
 flex-direction: column;
 
-background: linear-gradient(
+
+/* background: linear-gradient(
     338deg,
     rgba(55, 73, 144, 1) 2%,
     rgba(180, 110, 182, 1) 93%
   );
+  */
+ 
+
  background: linear-gradient(338deg, rgba(140,82,255,1) 2%, rgba(255,145,77,1) 99%);
   
 
   width: 100%;
  height: 800px;
-  
 
+  
 .main-top-div {
     display: flex;
     flex-direction: row;
     height:90%;
     border-bottom: solid 1px black;
 }
+
 
 .right-div{
     padding-left: 500px;
@@ -108,9 +113,7 @@ background: linear-gradient(
     /* width: 40vw; */
     width: 600px;
     aspect-ratio: 12/9;
-    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px inset;
-
-    
+    box-shadow: rgba(0, 0, 0, 0.5) 4px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
     /* clip-path: polygon(50% 0%, 100% 0, 100% 12%, 30% 73%, 0 100%, 0% 60%, 0 0); */
     clip-path: polygon(50% 0%, 100% 0, 100% 0, 29% 71%, 0 100%, 0% 60%, 0 0);
     user-select: none;

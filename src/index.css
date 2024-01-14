@@ -1,10 +1,37 @@
-body {
+body , html{
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background: linear-gradient(
+    338deg,
+    #eceef5 2%,
+    #f6f6f6 93%
+    
+  );
+
+
+}
+
+/* body{
+  overflow-x: hidden;
+} */
+
+
+h1{
+
+font-family: 'Nixie One', system-ui;
+color: rgb(0, 0, 0);
+}
+
+
+p, h4, h3{
+  font-family: 'Nixie One', system-ui;
+  font-weight: bold;
+  letter-spacing: 2.5px;
+
 }
 
 /* font-family: 'Cutive Mono', monospace; */
@@ -19,12 +46,15 @@ body {
 /* font-family: 'Bungee Outline', cursive; */
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',monospace;
 }
 
-
-
+hr{
+  border-top: solid rgb(0, 0, 0) 1px;
+  width: 50vw;
+  position: relative;
+  right: 50%;
+}
 /*-----------------------Scroll Bar----------------------------------*/
 
 ::-webkit-scrollbar {
@@ -76,8 +106,85 @@ code {
   content: "";
   top: 0;
   left: 0;
-  width: 100%;
-  height: 100%;
+  width: 200%;
+  height: 200%;
   background: linear-gradient(to top, #008aff, #00ffe7);
   filter: blur(30px);
+}
+
+/* Animations */
+
+@keyframes rotate-around {
+  from {
+    transform: rotate(0deg);
+ 
+  }
+  to{
+    transform: rotate(360deg);
+    
+  }
+  
+}
+
+@keyframes skew-show-1 {
+  0%{
+    transform: rotate(43deg) skew(-60deg, 81deg);
+  }50%{
+    transform: rotate(43deg) skew(60deg, 81deg);
+  }100%{
+    transform: scale(.7) rotate(79deg) skew(63deg, -100deg);
+     
+  }
+}
+
+
+@keyframes skew-show-2 {
+  0%{
+    transform: rotate(-143deg) skew(60deg, 81deg);
+  }50%{
+   
+  }100%{
+    transform: scale(.7) rotate(-11deg) skew(63deg, -100deg);
+   
+  }
+}
+
+@keyframes fade-in {
+  from{scale:0.8; opacity: 0; }
+  to{scale: 1.6; opacity: 1; }
+}
+
+@keyframes fade-in-title {
+  from{scale:0.8; opacity: 0; }
+  to{scale: 1.6; opacity: 1; }
+}
+
+
+@keyframes fade-out {
+  from{scale:1; opacity: 1;}
+  to{scale: 1.7; opacity: 0;}
+}
+
+@keyframes rotate-clockwise {
+  from{transform: rotate(0deg);}
+  to{transform: rotate(-360deg);}
+}
+
+@keyframes move-right{
+  from{left:50vw;}
+  to{left:300px;}
+}
+
+@keyframes move-left{
+ 0%{left:300%;}
+ 20%{scale: 2.7;}
+ 40%{scale: 1; }
+ 100%{left:-200vw;  scale: .1; }
+}
+
+@keyframes wave-animation {
+  0%{transform: translate(0%);
+  } 
+  50%{transform: translate(15%);}
+ 100%{transform: translate(0%);}
 }
