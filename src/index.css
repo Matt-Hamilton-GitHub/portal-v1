@@ -16,13 +16,11 @@ body , html{
 }
 
 h1{
-
 font-family: 'Nixie One', system-ui;
 color: rgb(0, 0, 0);
 }
 
-
-p, h4, h3{
+h4, h3, h5{
   font-family: 'Nixie One', system-ui;
   font-weight: bold;
   letter-spacing: 2.5px;
@@ -200,4 +198,29 @@ hr{
   } 
   50%{transform: translate(15%);}
  100%{transform: translate(0%);}
+}
+
+@keyframes zoom-in-project {
+
+  0% {
+    left: -10%;
+    background-color: rgba(140, 82, 255, 1);
+  }
+  50% {
+    scale: 1.6;
+    /* background-color: orange; */
+    background: linear-gradient(338deg, rgba(140,82,255,1) 2%, #ff8a41 99%);
+    left: 50%;
+    z-index: 10;
+    box-shadow: -3px 6px 15px 3px rgba(0,0,0,0.75);
+ 
+  }
+  100% {
+    display: none;
+    scale: 0;
+    z-index: 1;
+    left: -20%;
+
+
+  }
 }

@@ -14,12 +14,13 @@ function Projects() {
 
 <div className="projects-div">
     <div className="projects">
-     
+     <div className="dummy-start"></div>
         {projectsData.map((item, idx)=>{
           return(
             <SingleProject key={idx} item={item} />
           )
         })}
+           <div className="dummy-end"></div>
     </div>
 </div>
   </Wrapper>
@@ -29,7 +30,10 @@ function Projects() {
 
 export default Projects
 
+
+
 const Wrapper = styled.div`
+
 width: 100vw;
 position: relative;
 z-index: 2;
@@ -37,32 +41,58 @@ background-color:#8d64e0;
 margin-bottom: -10px ;
 
 
+.dummy-start{
+  width: 300px;
+  height: 100px;
+}
 
+.dummy-end{
+  width: 300px;
+  height: 200px;
+}
 
 h1{
 line-height: 50px;
 font-family: 'Bungee Shade', cursive;
 user-select: none;
+
 }
 
 
 
 .main-projects-div {
-
   position: relative;
   display: flex;
   justify-content: center;
   text-align: center;
-  margin-bottom: 20vh;  
+  margin-bottom: 10vh;  
   width:100vw;
-
 }
 
 .projects{
-  position: relative;
-
-
+    padding: 200px 0;
+    display: block;
+    padding: 50px 0;
+    position: relative;
+    overflow-x: hidden;
+    height: 600px;
+    width: 100vw;
+    white-space: nowrap;
+    z-index: 5;
+    padding-bottom: 100px;
 }
+
+/* ::-webkit-scrollbar-track {
+  background: grey;
+ }
+ ::-webkit-scrollbar {
+   width: 5px;
+}
+
+ ::-webkit-scrollbar-thumb {
+   background: white;
+   border-radius: 10px 1px;
+ } */
 
 .main-projects-div > h1 {
   position: relative;

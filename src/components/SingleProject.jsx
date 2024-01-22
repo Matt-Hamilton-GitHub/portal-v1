@@ -7,25 +7,21 @@ export const SingleProject = ({item}) => {
 
   return (
     <Wrapper>
-        
         <div className='project'>
-            <div className='left'>
-              <h3>{name}</h3>
-              <img src={img} alt={name} />
+            <div className='proj-img'>
+            <img src={img} alt={name} />
             </div>
-            <div className='right'>
-            <div className='tech-perks'>
+              <h5>{name}</h5>
+              <div className='tech-perks'>
                 {tags.map((item, idx)=>{
                     return(
                         <span key={idx}>{item}</span>
                     )
                 })}
             </div>
-            <p>{desc}</p>
-            <span className='span-link'><a href={url}>Visit</a></span>
+                <p>{desc}</p>
+                <span className='span-link'><a href={url}>Visit</a></span>
             </div>
-
-        </div>
     </Wrapper>
   )
 }
@@ -33,74 +29,104 @@ export const SingleProject = ({item}) => {
 
 const Wrapper = styled.div`
     
-display: flex;
-position: relative;
-justify-content: center;
-flex-direction: column;
-margin-bottom: 140px;
+    position: relative;
+    left: -20%;
+    width: 200px;
+    margin: 5px 0;
+    border-radius: 20px 5px;
+    z-index: 100;
+    overflow: hidden;
+
+    animation: zoom-in-project linear;
+    animation-timeline: view();
+    animation-range: contain cover;
 
 
+h5{
+    margin: 1px 0px; 
+    padding: 0px;
+    white-space: wrap;
+    font-size: 15px;
+}
 
+p{
+    position: relative;
+    padding: 5px ;
+    margin: 1px;
+    font-size: 6.5px;
 
-/* animation: move-left linear ;
-animation-timeline: view();
-animation-range: enter exit ;
-margin-top:50px; */
+    white-space: wrap;
+    font-family: 'Nixie One', system-ui;
+    font-weight: bold;
+}
 
+.proj-img{
+    position: relative;
+}
 
 
 .project{
+    position: relative;
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     flex-direction: column;
     align-items: center;
-    margin: 40px;
-    max-width: 600px;
+    align-items: center;
+    height: 15vh;
+    background: linear-gradient(338deg, rgba(140,82,255,1) 2%, #ff8a41 99%);
+    z-index: 100;
     
-    animation: fade-in cubic-bezier(.81,.36,.3,.81);
-    animation-timeline: view();
-    animation-range: cover;
 }
 
 img{
-    width: 160px;
-    height: 160px;
-    border-radius: 100%;
+    position: relative;
+    width: 200px;
+    height: 65px;
+    /* border-radius: 100%; */
     object-fit: cover;
+    border-bottom: 2px solid white;
 }
 
 .tech-perks{
-    padding-top: 15px;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    align-items: center;
+    padding: 10px;
+   
 }
 
 .tech-perks > span{
-    padding: 15px;
+    margin: 0px 5px;
+    color: white
+   
 }
 
 
 a{
-    text-decoration: none;
-    color: black;
+   position: relative;
+   text-decoration: none;
+   color: black;
+   font-size: 10px;
+   z-index: 30;
+   
 }
 
 .span-link{
     position: relative;
-    background-color: orange;
-    padding: 5px 10px;
-    border-radius: 10% 40%;
-    box-shadow: 10px 9px 2px -17px rgba(255, 255, 255, 0.75);
-    z-index: 1000;
-    transition: all 4 linear;
- 
+    display: block;
+   
+    background-color: #ffffff;
+    padding: 5px;
+    border-radius: 100%;
+    z-index: 500;
+    box-shadow: inset 10px 9px 2px -17px rgba(255, 255, 255, 0.75);
+  
 }
 
 .span-link:hover{
-    
-    color: white;
-    box-shadow: 10px 9px 2px -17px rgba(255, 255, 255, 0.75);
-    scale:1.3;
+
+
 }
-
-
 
 `

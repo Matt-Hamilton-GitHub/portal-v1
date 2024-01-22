@@ -23,10 +23,10 @@ const websites_list = [
     id: 0,
     name: "CozyHome",
     tags: [
-      <DiReact size={35} />,
-      <GoDatabase size={35} />,
-      <RiSecurePaymentFill size={35}/>,
-      <HiUserAdd size={35}/>,
+      <DiReact size={25} />,
+      <GoDatabase size={20} />,
+      <RiSecurePaymentFill size={20}/>,
+      <HiUserAdd size={20}/>,
       
     ],
     url: "https://cozy-home.netlify.app/",
@@ -41,7 +41,7 @@ const websites_list = [
     id: 101,
     name: "The Fit Club",
     tags: [
-      <DiReact size={35} />,
+      <DiReact size={25} />,
       
     ],
     url: "https://brilliant-bubblegum-ecf021.netlify.app/",
@@ -56,10 +56,10 @@ const websites_list = [
     id: 23,
     name: "Bunny-Clothes",
     tags: [
-      <DiReact size={35} />,
-      <GoDatabase size={35} />,
-      <RiSecurePaymentFill size={35}/>,
-      <HiUserAdd size={35}/>,
+      <DiReact size={25} />,
+      <GoDatabase size={20} />,
+      <RiSecurePaymentFill size={20}/>,
+      <HiUserAdd size={20}/>,
       
     ],
     url: "https://bunny-clothes.netlify.app/",
@@ -74,8 +74,8 @@ const websites_list = [
     id: 22,
     name: "Ddoskis Drinks",
     tags: [
-      <DiReact size={35} />,
-      <GoDatabase size={35} />,
+      <DiReact size={25} />,
+      <GoDatabase size={20} />,
 
       
     ],
@@ -92,9 +92,9 @@ const websites_list = [
     id: 1,
     name: "Search for GitHub User",
     tags: [
-      <DiReact size={40} />,
-      <AiOutlineBarChart size={40} />,
-      <HiUserAdd size={40}/>,
+      <DiReact size={25} />,
+      <AiOutlineBarChart size={20} />,
+      <HiUserAdd size={20}/>,
      
     ],
     url: "https://react-search-github-users-matt-v.netlify.app/login",
@@ -109,8 +109,8 @@ const websites_list = [
     id: 2,
     name: "CocktailsDB",
     tags: [
-      <DiReact size={40} />,
-      <GoDatabase size={40} />,
+      <DiReact size={25} />,
+      <GoDatabase size={20} />,
       
     ],
     url: "https://determined-northcutt-73ff98.netlify.app/",
@@ -126,7 +126,7 @@ const websites_list = [
     id: 3,
     name: "Color Generator",
     tags: [
-      <DiReact size={40} />,
+      <DiReact size={25} />,
       
       
     ],
@@ -140,8 +140,8 @@ const websites_list = [
     id: 4,
     name: "MoviesDB",
     tags: [
-      <DiReact size={40} />,
-      <GoDatabase size={40} />,
+      <DiReact size={25} />,
+      <GoDatabase size={20} />,
       
     ],
     url: "https://friendly-colden-213cfb.netlify.app/",
@@ -154,8 +154,8 @@ const websites_list = [
     id: 5,
     name: "Hacker News",
     tags: [
-      <DiReact size={40} />,
-      <GoDatabase size={40} />,
+      <DiReact size={25} />,
+      <GoDatabase size={20} />,
       
     ],
     url: "https://blissful-lovelace-752d3a.netlify.app/",
@@ -169,8 +169,8 @@ const websites_list = [
     id: 6,
     name: "Take a Quiz",
     tags: [
-      <DiReact size={40} />,
-      <GoDatabase size={40} />,
+      <DiReact size={25} />,
+      <GoDatabase size={20} />,
       
     ],
     url: "https://festive-hopper-045f9a.netlify.app/",
@@ -183,8 +183,8 @@ const websites_list = [
     id: 7,
     name: "Guess a Word",
     tags: [
-      <AiFillHtml5 size={40} />,
-      <DiJavascript1 size={40} />,
+      <AiFillHtml5 size={20} />,
+      <DiJavascript1 size={20} />,
       
     ],
     url: "https://rainbow-mooncake-8738e2.netlify.app/",
