@@ -6,6 +6,7 @@ export const SingleProject = ({item}) => {
     const { name, url,img, desc , tags} = item;
 
   return (
+    <>
     <Wrapper>
         <div className='project'>
             <div className='proj-img'>
@@ -19,10 +20,18 @@ export const SingleProject = ({item}) => {
                     )
                 })}
             </div>
-                <p>{desc}</p>
-                <span className='span-link'><a href={url}>Visit</a></span>
+                
             </div>
+            
     </Wrapper>
+
+<WrapperSideBar>
+    <div className='project-side-bar' >
+        <p>{desc}</p>
+        <span className='span-link'><a href={url}>Visit</a></span>
+    </div>
+</WrapperSideBar>
+    </>
   )
 }
 
@@ -54,7 +63,8 @@ p{
     padding: 5px ;
     margin: 1px;
     font-size: 6.5px;
-
+    width: 100px;
+    height: 200px;
     white-space: wrap;
     font-family: 'Nixie One', system-ui;
     font-weight: bold;
@@ -81,7 +91,7 @@ p{
 img{
     position: relative;
     width: 200px;
-    height: 65px;
+    height: 100px;
     /* border-radius: 100%; */
     object-fit: cover;
     border-bottom: 2px solid white;
@@ -103,6 +113,50 @@ img{
 }
 
 
+
+
+
+
+`
+
+const WrapperSideBar = styled.div`
+
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  
+    width: 350px;
+    left: 90%;
+    top: -30%;
+    animation: zoom-in-project-side-bar linear;
+    animation-timeline: view();
+    animation-range: contain cover;
+
+  
+
+p{
+    position: relative;
+    padding: 5px ;
+    margin: 1px;
+    font-size: 15.5px;
+    white-space: wrap;
+    font-family: 'Nixie One', system-ui;
+    font-weight: bold;
+ 
+}
+
+.project-side-bar{
+    position: relative;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    right: -10%;
+}
+
+
 a{
    position: relative;
    text-decoration: none;
@@ -116,9 +170,10 @@ a{
     position: relative;
     display: block;
    
-    background-color: #ffffff;
-    padding: 5px;
-    border-radius: 100%;
+    background-color: #ff8a41;
+    padding: 1px;
+    border-radius: 10% 15%;
+    width: 70px;
     z-index: 500;
     box-shadow: inset 10px 9px 2px -17px rgba(255, 255, 255, 0.75);
   
@@ -128,5 +183,6 @@ a{
 
 
 }
+
 
 `

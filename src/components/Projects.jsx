@@ -21,6 +21,7 @@ function Projects() {
           )
         })}
            <div className="dummy-end"></div>
+           
     </div>
 </div>
   </Wrapper>
@@ -39,6 +40,8 @@ position: relative;
 z-index: 2;
 background-color:#8d64e0;
 margin-bottom: -10px ;
+box-shadow: inset 10px 9px 2px -17px rgba(255, 255, 255, 0.75);
+  
 
 
 .dummy-start{
@@ -80,6 +83,7 @@ user-select: none;
     white-space: nowrap;
     z-index: 5;
     padding-bottom: 100px;
+    
 }
 
 /* ::-webkit-scrollbar-track {
@@ -111,5 +115,6 @@ user-select: none;
   width: 100vw;
   margin-top: 100px;
   z-index:20;
+  
 }
 `

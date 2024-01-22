@@ -74,7 +74,7 @@ export default TitlePage
 const Wrapper = styled.div`
 position: relative;
 width: 100vw;
-height: 90vh;
+height: 900px;
 display:flex;
 justify-content: center;
 flex-direction: column;
