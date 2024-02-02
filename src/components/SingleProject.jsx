@@ -41,6 +41,7 @@ const Wrapper = styled.div`
     position: relative;
     left: -20%;
     width: 200px;
+    height: 170px;
     margin: 5px 0;
     border-radius: 20px 5px;
     z-index: 100;
@@ -82,7 +83,7 @@ p{
     flex-direction: column;
     align-items: center;
     align-items: center;
-    height: 15vh;
+    height: 170px;
     background: linear-gradient(338deg, rgba(140,82,255,1) 2%, #ff8a41 99%);
     z-index: 100;
     
@@ -168,7 +169,11 @@ a{
 
 .span-link{
     position: relative;
-    display: block;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    text-align: center;
+ 
    
     background-color: #ff8a41;
     padding: 1px;
