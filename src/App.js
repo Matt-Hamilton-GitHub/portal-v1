@@ -3,7 +3,7 @@ import React, {useEffect} from 'react';
 import Education from './components/Education';
 import Projects from './components/Projects';
 import TitlePage from './components/TitlePage';
-
+import ProjectsOriginal from './components/ProjectsOriginal';
 
 function App() {
 
@@ -34,7 +34,8 @@ function App() {
       <div id="progressbar"></div>
       <div id="scrollPath"></div> 
       <TitlePage /> 
-      <Projects />
+      {/* <Projects /> */}
+      <ProjectsOriginal />
       <Education />
     </>
   );

@@ -2,16 +2,15 @@
 import React from 'react'
 import styled from 'styled-components'
 
+import CourseItem from './CourseItem'
+
+import ucbCourses from '../assets/data_base/courseUCB'
 import ucb from '../assets/img/uc b.jpg'
+
 
 export const Education = () => {
   return (
     <Wrapper>
-
-<div className="title-div">
-            <h1>Education</h1>  
-</div>
-
 <div className='animation-container adjust-1'>
 <div className="custom-shape-divider-1">
     <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
@@ -26,10 +25,11 @@ export const Education = () => {
         <path d="M985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.26-17.34-168.06-16.33-250.45.39-57.84,11.73-114,31.07-172,41.86A600.21,600.21,0,0,1,0,27.35V120H1200V95.8C1132.19,118.92,1055.71,111.31,985.66,92.83Z" className="shape-fill"></path>
     </svg>
 </div>
+
 </div>
-
-
-
+<div className="title-div">
+            <h1>Education</h1>  
+</div>
     <div className="main-section">
             <h2>UC Berkeley</h2>
         <div className="berkeley-img">
@@ -42,26 +42,15 @@ export const Education = () => {
                  this public research university has consistently ranked among the top institutions globally. Known for its 
                  rigorous academic programs, Berkeley boasts a distinguished faculty, including Nobel laureates, 
                  Pulitzer Prize winners, and Fields Medalists. The campus is renowned for its vibrant and politically active student body,
-                  as well as its commitment to social justice and diversity. Berkeley's sprawling campus is home to iconic landmarks such 
-                  as the Campanile and the Doe Library, providing a picturesque backdrop to a wealth of academic pursuits. 
-                  With a rich history of groundbreaking research, UC Berkeley continues to contribute significantly to advancements in science,
-                   technology, and the humanities, solidifying its status as a leader in higher education and a hub for intellectual curiosity.
+                 
             </h3>
         </div>
 
         <div className="course-work-section">
             <h3>Course Work</h3>
+            <hr />
             <div className="courses">
-                <div className="course-item"><h2>CS 61A</h2></div>
-                <div className="course-item">CS 61B</div>
-                <div className="course-item">CS 61C</div>
-                <div className="course-item"></div>
-                <div className="course-item"></div>
-                <div className="course-item"></div>
-                <div className="course-item"></div>
-                <div className="course-item"></div>
-                <div className="course-item"></div>
-                <div className="course-item"></div>
+                {ucbCourses.map((item, idx) =>  {return <CourseItem key={idx} item={item}/>})}
             </div>
         </div>
     </div>
@@ -82,16 +71,17 @@ export default Education
 
 const Wrapper = styled.div`
 position: relative;
-display:flex;
-height: 1600px;
+display: flex;
+
 justify-content: center;
 align-items: center;
 text-align: center;
 flex-direction: column;
 
-flex-wrap: wrap;
 align-items: center;
 z-index: 1;
+user-select: none;
+
 
 
 
@@ -103,7 +93,7 @@ z-index: 1;
     flex-direction: column;
     align-items: center;
     flex-wrap: wrap;
-    overflow: hidden;
+    
 
 }
 
@@ -146,12 +136,52 @@ font-family: 'Bungee Outline', cursive; */
     height: 350px;
     object-fit: cover;
     border: solid black 2px;
+    z-index: 10;
 }
 
+.berkeley-img::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background: black;
+    z-index: 1;
+}
+
+
+.course-work-section{
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+.course-work-section > h3{
+    // border-bottom: 1px solid black
+}
 .courses{
+    position: relative;
+    padding: 10px;
     display: flex;
     flex-direction: row;
-    justify-content:center;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 100px;
+    
+}
+
+hr{
+    position: absolute;
+    top: 40px;
+    right: 25%;
+    width: 50%;
+  
     
 }
 .course-item{
@@ -175,12 +205,13 @@ top: -1px;
 }
 
 .adjust-3{
+    
     bottom:0;
 }
 
 .title-div{
-    position: absolute;
-    top: 0;
+    position: relative;
+    margin-top: 50px;
     height:100px;
     z-index: 400;
 }
@@ -203,6 +234,7 @@ top: -1px;
     width: 150vw;
     transform: rotate(180deg);
     z-index: 20;
+ 
 }
 
 .custom-shape-divider-1 svg {
@@ -249,6 +281,7 @@ top: -1px;
     width: 150vw;
     transform: rotate(180deg);
     z-index: 20;
+    flex-warap: wrap;
 }
 
 .custom-shape-divider-3 svg {
@@ -263,4 +296,6 @@ top: -1px;
 .custom-shape-divider-3 .shape-fill {
     fill: #ff8a41;
 }
+
+
 `
