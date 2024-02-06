@@ -116,4 +116,9 @@ user-select: none;
   z-index:20;
   
 }
+
+
+@supports(animation-timeline: view()){
+  
+}
 `

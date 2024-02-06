@@ -66,9 +66,7 @@ user-select: none;
 
 .main-projects-div > h1 {
   position: relative;
-  animation: fade-in-title cubic-bezier(.81,.36,.3,.81);
-  animation-timeline: view();
-  animation-range:enter enter;
+
   z-index: 10;
 }
 
@@ -81,5 +79,15 @@ user-select: none;
   width: 100vw;
   margin-top: 100px;
   z-index:20;
+}
+
+@supports(animation-timeline: view()){
+  .main-projects-div > h1 {
+
+  animation: fade-in-title cubic-bezier(.81,.36,.3,.81);
+  animation-timeline: view();
+  animation-range:enter enter;
+
+}
 }
 `

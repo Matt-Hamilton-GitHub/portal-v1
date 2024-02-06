@@ -1,0 +1,2 @@
+# scroll-based animations with CSS-only is not supported:
+@supports(animation-timeline: view())
