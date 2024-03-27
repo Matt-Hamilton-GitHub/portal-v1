@@ -124,7 +124,7 @@ user-select: none;
 }
 }
 
-@media (max-width: 420px){
+@media (max-width: 500px){
   .dummy-start{
     display: none;
 }
@@ -135,14 +135,15 @@ user-select: none;
 
 .projects{
     padding: 0;
+    margin: 0;
     width: 100%;
+    height: 1200px;
     display: flex;
     position: relative;
     justify-content: center;
     align-items: center;
     text-align: center;
     flex-direction: column;
-    
     
   
     

@@ -327,4 +327,24 @@ top: -1px;
 }
 
 
+@media (max-width: 500px){
+
+    .berkeley-img::after{
+    content: '';
+    position: absolute;
+    top: -10px;
+    left: -20px;
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    background: #7c3dfb;
+    box-shadow: 0px 11px 41px 2px rgba(0,0,0,0.75);
+    z-index: -1;
+
+
+    /* animation: 10s infinite orbit-move-small linear; */
+
+}
+}
+
 `

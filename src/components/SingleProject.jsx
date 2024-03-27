@@ -119,7 +119,7 @@ img{
 }
 
 
-@media (max-width: 420px){
+@media (max-width: 500px){
 
     position: relative;
     display: flex;
@@ -131,7 +131,7 @@ img{
 
 
  
-    height: 370px;
+    height: 750px;
     margin: 5px 0;
     left: 0;
     
@@ -148,6 +148,34 @@ img{
     width: 90vw;
     height: 400px;
     /* border-radius: 100%; */
+    object-fit: cover;
+    border-bottom: 2px solid white;
+}
+
+.project{
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    align-items: center;
+    align-items: center;
+    height: 170px;
+    /* background: linear-gradient(338deg, rgba(140,82,255,1) 2%, #ff8a41 99%); */
+   background: white;
+   z-index: 100;
+   
+}
+
+.proj-img{
+    position: relative;
+    
+}
+
+img{
+    position: relative;
+    width: 200px;
+    height: 100px;
+    /* borde-radius: 100%; */
     object-fit: cover;
     border-bottom: 2px solid white;
 }
