@@ -219,7 +219,7 @@ hr{
     opacity: .5;
   }
   50% {
-    scale: 1.6;
+    scale: 1.9;
     /* background-color: orange; */
     background: linear-gradient(338deg, rgba(140,82,255,1) 2%, #ff8a41 99%);
     left: 50%;

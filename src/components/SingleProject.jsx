@@ -122,7 +122,7 @@ img{
 }
 
 
-@media (max-width: 500px){
+@media (max-width: 750px){
 
     position: relative;
     display: flex;

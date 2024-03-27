@@ -21,7 +21,7 @@ export default CourseItem
 
 const Wrapper = styled.div`
 display: flex;
-margin: 10px;
+margin: 5px;
 padding: 0 10px ;
 height: 30px;
 justify-content: center;

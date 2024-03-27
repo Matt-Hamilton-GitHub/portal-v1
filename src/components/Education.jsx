@@ -80,10 +80,10 @@ justify-content: center;
 align-items: center;
 text-align: center;
 flex-direction: column;
-
 align-items: center;
 z-index: 1;
 user-select: none;
+
 
 
 .main-section{
@@ -94,6 +94,8 @@ user-select: none;
     flex-direction: column;
     align-items: center;
     flex-wrap: wrap;
+
+    
 }
 
 .main-section > h3 {
@@ -327,7 +329,7 @@ top: -1px;
 }
 
 
-@media (max-width: 500px){
+@media (max-width: 750px){
 
     .berkeley-img::after{
     content: '';

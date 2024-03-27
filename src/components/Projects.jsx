@@ -124,7 +124,7 @@ user-select: none;
 }
 }
 
-@media (max-width: 500px){
+@media (max-width: 750px){
   width: 100vw;
   .dummy-start{
     display: none;
