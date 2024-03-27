@@ -145,7 +145,7 @@ font-family: 'Bungee Outline', cursive; */
     width: 350px;
     height: 350px;
     object-fit: cover;
-    border: solid #ff8a41 1px;
+    border: solid #ff8a41 3px;
     z-index: 10;
     
 }

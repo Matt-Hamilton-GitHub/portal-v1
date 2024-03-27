@@ -49,11 +49,12 @@ const Wrapper = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
+    border: 2px solid white;
    
 
 
 h5{
-    margin: 1px 0px; 
+    margin: -1px 0px; 
     padding: 0px;
     white-space: wrap;
     font-size: 15px;
@@ -108,6 +109,8 @@ img{
     flex-direction: row;
     align-items: center;
     padding: 10px;
+    width: 100%;
+    background-color:#ff8a41;
  
    
 }
@@ -127,30 +130,20 @@ img{
     align-items: center;
     text-align: center;
     margin: 15px;
-    width: 100vw;   
-
+    width: 150px;
+    flex-wrap: wrap;
+    flex-direction: row;
 
  
-    height: 750px;
     margin: 5px 0;
     left: 0;
     
-  
-  
     border-radius: 20px 5px;
     z-index: 100;
     overflow: hidden;
-
     animation: none;
 
-  img{
-    position: relative;
-    width: 90vw;
-    height: 400px;
-    /* border-radius: 100%; */
-    object-fit: cover;
-    border-bottom: 2px solid white;
-}
+    box-shadow: 0px 1px 5px 2px rgba(0,0,0,0.75);
 
 .project{
     position: relative;
@@ -158,11 +151,11 @@ img{
     justify-content: space-around;
     flex-direction: column;
     align-items: center;
-    align-items: center;
     height: 170px;
     /* background: linear-gradient(338deg, rgba(140,82,255,1) 2%, #ff8a41 99%); */
-   background: white;
-   z-index: 100;
+
+    z-index: 100;
+   
    
 }
 
@@ -173,11 +166,16 @@ img{
 
 img{
     position: relative;
-    width: 200px;
-    height: 100px;
-    /* borde-radius: 100%; */
+
+ 
     object-fit: cover;
     border-bottom: 2px solid white;
+}
+
+h5{
+
+    font-size: 13px;
+
 }
 }
 
