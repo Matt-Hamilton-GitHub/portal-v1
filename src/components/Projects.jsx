@@ -138,13 +138,13 @@ user-select: none;
     padding: 0;
     margin: 0;
     width: 90vw;
-    height: 800px;
+    height: 500px;
    
     display: flex;
     position: relative;
     justify-content: center;
     flex-wrap: wrap;
-    gap: 10px;
+    gap: 15px;
     align-items: center;
     text-align: center;
     flex-direction: row;

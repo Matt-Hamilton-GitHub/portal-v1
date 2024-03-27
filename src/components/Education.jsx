@@ -240,7 +240,7 @@ top: -1px;
 
 .title-div{
     position: relative;
-    margin-top: -100px;
+    margin-top: 100px;
     margin-bottom: 150px;
     height: 100px;
     z-index: 400;
@@ -340,11 +340,12 @@ top: -1px;
     background: #7c3dfb;
     box-shadow: 0px 11px 41px 2px rgba(0,0,0,0.75);
     z-index: -1;
-
+}
 
     /* animation: 10s infinite orbit-move-small linear; */
-
-}
+    .ucb-desc > h3{
+        font-size: 15px;
+    }
 }
 
 `
