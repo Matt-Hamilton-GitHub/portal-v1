@@ -51,14 +51,14 @@ import bear from '../assets/img/bear.svg'
      
                 <h1>MATT <b>HAMILTON</b></h1>
                
-                <div className="upper-triangle">
+            
                 <div className="profile-logo">
                     <img className='profile-img' src={profileImg} alt='profile' />
                     <div className="cal-div">
-                    <span className='golden-bear-slogan'>Go Bears!</span>
+                         <span className='golden-bear-slogan'>Go Bears!</span>
                     <img className='golden-bear' src={bear} alt='golden bear' />
                     </div>
-                    </div>
+                    
                 </div> 
             </div>
         </div>
@@ -74,7 +74,7 @@ export default TitlePage
 const Wrapper = styled.div`
 position: relative;
 width: 100vw;
-height: 900px;
+
 display:flex;
 justify-content: center;
 flex-direction: column;
@@ -150,7 +150,7 @@ path{
     display: inline-block;
     position: relative;
     width: 100%;
-    margin: 50px;
+    margin-top: 50px;
     /* right: 10%; */
     font-weight: 400;
     font-size: 2.5rem;
@@ -180,14 +180,16 @@ path{
 
 
 
-.upper-triangle > .profile-logo {
+ .profile-logo {
     position: relative;
     display: flex;
     justify-content: center;
+    align-items: center;
     flex-direction: column;
-    margin: 30px 20px;
+    margin: 10px 20px;
+    margin-top: -90px;
     text-align: center;
-    width: auto;
+    width: 90vw;
     z-index:100;
     user-select: none;
 
@@ -196,11 +198,11 @@ path{
 
 .profile-logo::before{
     content: "";
-    position: absolute;
+    position: relative;
     width: 150px;
     height: 150px;
-    top: -30px;
-    left: 60px;
+    top: 110px;
+    left: -20px;
     background: linear-gradient(338deg, rgba(140,82,255,1) 2%, #ff8a41 99%);
     border-radius: 90px;
     box-shadow:  0px 0px 63px -14px rgba(0, 0, 0, 1);
@@ -212,7 +214,6 @@ path{
 .profile-logo > .profile-img {
     position: relative;
     border: solid 2px black;
-    left: 50px;
     border-radius: 90%;
     width: 200px;
     z-index:10;
@@ -222,8 +223,10 @@ path{
 .cal-div{
     display: block;
     position: relative;
-    right: -25%;
-    margin: 20px;
+    right: 10px;
+    top: 0;
+    margin: 10px;
+    
 }
 
 .golden-bear-slogan {

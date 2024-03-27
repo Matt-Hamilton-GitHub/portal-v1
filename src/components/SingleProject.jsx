@@ -6,33 +6,7 @@ export const SingleProject = ({item}) => {
     const { name, url,img, desc , tags} = item;
 
   return (
-    <>
-    {/* <Wrapper>
-        <div className='project'>
-            <div className='proj-img'>
-            <img src={img} alt={name} />
-            </div>
-              <h5>{name}</h5>
-              <div className='tech-perks'>
-                {tags.map((item, idx)=>{
-                    return(
-                        <span key={idx}>{item}</span>
-                    )
-                })}
-            </div>
-                
-            </div>
-            
-    </Wrapper>
-
-<WrapperSideBar>
-    <div className='project-side-bar' >
-        <p>{desc}</p>
-        <span className='span-link'><a href={url}>Visit</a></span>
-    </div>
-</WrapperSideBar> */}
-
-
+   
 <Wrapper>
         <div className='project'>
             <div className='proj-img'>
@@ -49,7 +23,6 @@ export const SingleProject = ({item}) => {
             </div>           
     </Wrapper>
 
-    </>
   )
 }
 
@@ -61,7 +34,9 @@ const Wrapper = styled.div`
     animation: zoom-in-project linear;
     animation-timeline: view();
     animation-range: contain cover;
-}
+
+} 
+
 
     position: relative;
     left: -20%;
@@ -71,6 +46,10 @@ const Wrapper = styled.div`
     border-radius: 20px 5px;
     z-index: 100;
     overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
 
 
 h5{
@@ -139,5 +118,39 @@ img{
    
 }
 
+
+@media (max-width: 420px){
+
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 15px;
+    width: 100vw;   
+
+
+ 
+    height: 370px;
+    margin: 5px 0;
+    left: 0;
+    
+  
+  
+    border-radius: 20px 5px;
+    z-index: 100;
+    overflow: hidden;
+
+    animation: none;
+
+  img{
+    position: relative;
+    width: 90vw;
+    height: 400px;
+    /* border-radius: 100%; */
+    object-fit: cover;
+    border-bottom: 2px solid white;
+}
+}
 
 `

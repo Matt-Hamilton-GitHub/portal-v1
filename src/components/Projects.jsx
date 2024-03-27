@@ -123,4 +123,29 @@ user-select: none;
   animation-range:enter enter;
 }
 }
+
+@media (max-width: 420px){
+  .dummy-start{
+    display: none;
+}
+
+.dummy-end{
+  display: none;
+}
+
+.projects{
+    padding: 0;
+    width: 100%;
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+    
+    
+  
+    
+}
+}
 `
