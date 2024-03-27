@@ -33,7 +33,7 @@ import bear from '../assets/img/bear.svg'
        
     }
 
-generateTitle();
+// generateTitle();
 
   return (
     <Wrapper>
@@ -49,7 +49,7 @@ generateTitle();
         <div className="title-main-section"> 
            <div className="title-div">
      
-                <h1>{title} <b>HAMILTON</b></h1>
+                <h1>MATT <b>HAMILTON</b></h1>
                
                 <div className="upper-triangle">
                 <div className="profile-logo">
@@ -78,6 +78,7 @@ height: 900px;
 display:flex;
 justify-content: center;
 flex-direction: column;
+text-align: center;
 flex-wrap: wrap;
 align-items: center;
 z-index: 1;
@@ -148,6 +149,7 @@ path{
 .title-div > h1 {
     display: inline-block;
     position: relative;
+    width: 100%;
     margin: 50px;
     /* right: 10%; */
     font-weight: 400;
@@ -199,7 +201,6 @@ path{
     height: 150px;
     top: -30px;
     left: 60px;
-    
     background: linear-gradient(338deg, rgba(140,82,255,1) 2%, #ff8a41 99%);
     border-radius: 90px;
     box-shadow:  0px 0px 63px -14px rgba(0, 0, 0, 1);

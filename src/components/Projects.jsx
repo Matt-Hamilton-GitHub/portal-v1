@@ -45,12 +45,12 @@ overflow: hidden;
 
 .dummy-start{
   width: 300px;
-  height: 100px;
+  height: 30px;
 }
 
 .dummy-end{
   width: 300px;
-  height: 200px;
+  height: 300px;
 }
 
 h1{
@@ -59,8 +59,6 @@ font-family: 'Bungee Shade', cursive;
 user-select: none;
 
 }
-
-
 
 .main-projects-div {
   position: relative;
@@ -74,7 +72,6 @@ user-select: none;
 .projects{
     padding: 200px 0;
     display: block;
-    padding: 50px 0;
     position: relative;
     overflow-x: hidden;
     height: 600px;
@@ -82,6 +79,7 @@ user-select: none;
     white-space: nowrap;
     z-index: 5;
     padding-bottom: 100px;
+  
     
 }
 
@@ -119,6 +117,10 @@ user-select: none;
 
 
 @supports(animation-timeline: view()){
-  
+  .main-projects-div > h1 {
+  animation: fade-in-title cubic-bezier(.81,.36,.3,.81);
+  animation-timeline: view();
+  animation-range:enter enter;
+}
 }
 `

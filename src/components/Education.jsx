@@ -27,22 +27,25 @@ export const Education = () => {
 </div>
 
 </div>
-<div className="title-div">
+
+<div className="main-section"> 
+
+        <div className="title-div">
             <h1>Education</h1>  
-</div>
-    <div className="main-section">
-            <h2>UC Berkeley</h2>
+        </div>
+  
         <div className="berkeley-img">
             <img src={ucb} alr='UC Berkeley' />
         </div>
+
         <div className="ucb-desc">
+                <h2>UC Berkeley</h2>
             <h3>
                 The University of California, Berkeley, commonly known as UC Berkeley or simply Berkeley, stands as a 
                  of academic excellence and innovation in the heart of the San Francisco Bay Area. Established in 1868, 
                  this public research university has consistently ranked among the top institutions globally. Known for its 
                  rigorous academic programs, Berkeley boasts a distinguished faculty, including Nobel laureates, 
-                 Pulitzer Prize winners, and Fields Medalists. The campus is renowned for its vibrant and politically active student body,
-                 
+                 Pulitzer Prize winners, and Fields Medalists. The campus is renowned for its vibrant and politically active student body,     
             </h3>
         </div>
 
@@ -50,7 +53,7 @@ export const Education = () => {
             <h3>Course Work</h3>
             <hr />
             <div className="courses">
-                {ucbCourses.map((item, idx) =>  {return <CourseItem key={idx} item={item}/>})}
+                {ucbCourses.map((item, idx) => {return <CourseItem key={idx} item={item}/>})}
             </div>
         </div>
     </div>
@@ -83,23 +86,19 @@ z-index: 1;
 user-select: none;
 
 
-
-
 .main-section{
     display: flex;
     padding: 40px;
-    margin: 25px;
+    margin: 200px;
     justify-content: center;
     flex-direction: column;
     align-items: center;
     flex-wrap: wrap;
-    
-
 }
 
-.main-section > h2 {
-    font-size: 45px;
-    /* color: orange; */
+.main-section > h3 {
+font-size: 30px;
+/* color: orange; */
 
 /* font-family: 'Josefin Sans', sans-serif;
 font-family: 'Julius Sans One', sans-serif;
@@ -112,6 +111,16 @@ font-family: 'Borel', cursive;
 font-family: 'Bungee Outline', cursive; */
 }
 
+.ucb-desc > h2 {
+    font-weight: 900;
+    font-family: 'Nixie One', system-ui;
+  
+}
+
+.course-work-section > h3 {
+    font-weight: 900;
+}
+
 .berkeley-img{
     display: flex;
     justify-content: center;
@@ -121,6 +130,7 @@ font-family: 'Bungee Outline', cursive; */
     -webkit-box-shadow: 0px 11px 41px 2px rgba(0,0,0,0.75);
     -moz-box-shadow: 0px 11px 41px 2px rgba(0,0,0,0.75);
     box-shadow: 0px 11px 41px 2px rgba(0,0,0,0.75);
+    
 }
 
 .ucb-desc{
@@ -135,8 +145,9 @@ font-family: 'Bungee Outline', cursive; */
     width: 350px;
     height: 350px;
     object-fit: cover;
-    border: solid black 2px;
+    border: solid #ff8a41 1px;
     z-index: 10;
+    
 }
 
 .berkeley-img::before{
@@ -147,13 +158,34 @@ font-family: 'Bungee Outline', cursive; */
     width: 100px;
     height: 100px;
     border-radius: 50%;
-    background: black;
+    background: #ff8a41;
+    box-shadow: 0px 11px 41px 2px rgba(0,0,0,0.75);
     z-index: 1;
+
+    /* animation: 10s infinite orbit-move-small-cc linear; */
+}
+
+.berkeley-img::after{
+    content: '';
+    position: absolute;
+    top: -30px;
+    left: -50px;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background: #7c3dfb;
+    box-shadow: 0px 11px 41px 2px rgba(0,0,0,0.75);
+    z-index: -1;
+
+
+    /* animation: 10s infinite orbit-move-small linear; */
+
 }
 
 
 .course-work-section{
     position: relative;
+ 
     width: 100%;
     display: flex;
     justify-content: center;
@@ -188,10 +220,7 @@ hr{
     margin: 5px;
     background: linear-gradient(338deg, rgba(140,82,255,1) 2%, #ff8a41 99%);
     border-radius: 15%;
-
 }
-
-
 
 .adjust-1{
     top: 0px;
@@ -211,8 +240,9 @@ top: -1px;
 
 .title-div{
     position: relative;
-    margin-top: 50px;
-    height:100px;
+    margin-top: -100px;
+    margin-bottom: 150px;
+    height: 100px;
     z-index: 400;
 }
 
@@ -273,7 +303,6 @@ top: -1px;
     fill: #8D64E0;
 }
 
-
 .custom-shape-divider-3 {
     position: relative;
     bottom: 0;
@@ -281,7 +310,7 @@ top: -1px;
     width: 150vw;
     transform: rotate(180deg);
     z-index: 20;
-    flex-warap: wrap;
+    flex-wrap: wrap;
 }
 
 .custom-shape-divider-3 svg {

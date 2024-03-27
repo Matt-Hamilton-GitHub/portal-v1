@@ -4,6 +4,7 @@ import Education from './components/Education';
 import Projects from './components/Projects';
 import TitlePage from './components/TitlePage';
 import ProjectsOriginal from './components/ProjectsOriginal';
+import { SingleProject } from './components/SingleProject';
 
 function App() {
 
@@ -34,8 +35,8 @@ function App() {
       <div id="progressbar"></div>
       <div id="scrollPath"></div> 
       <TitlePage /> 
-      {/* <Projects /> */}
-      <ProjectsOriginal />
+      <Projects />
+  
       <Education />
     </>
   );

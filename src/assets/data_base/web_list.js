@@ -88,7 +88,7 @@ const websites_list = [
 
   {
     id: 1,
-    name: "Search for GitHub User",
+    name: "GitHub User",
     tags: [
       <DiReact size={25} />,
       <AiOutlineBarChart size={20} />,

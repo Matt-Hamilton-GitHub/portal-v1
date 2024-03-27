@@ -213,15 +213,19 @@ hr{
 
   0% {
     left: -10%;
+    scale: .6;
     background-color: rgba(140, 82, 255, 1);
+    z-index: 1;
+    opacity: .5;
   }
   50% {
     scale: 1.6;
     /* background-color: orange; */
     background: linear-gradient(338deg, rgba(140,82,255,1) 2%, #ff8a41 99%);
-    left: 20%;
+    left: 50%;
     z-index: 10;
     box-shadow: -3px 6px 15px 3px rgba(0,0,0,0.75);
+    opacity: 1;
  
   }
   100% {
@@ -229,6 +233,7 @@ hr{
     scale: 0;
     z-index: 1;
     left: -20%;
+    opacity: 0;
 
 
   }
@@ -257,5 +262,75 @@ hr{
     right: -60%;
     top: -30%;
 
+  }
+}
+
+
+@keyframes orbit-move-small{
+
+  0% {
+    background-color: rgba(140, 82, 255, 1);
+    left: 0;
+    top: 0;
+  }
+  10% {
+    left: calc(50% - 175px);
+    top: calc(50% - 175px);
+  }
+  25% {
+    left: calc(50% - 25px);
+    top: calc(50% - 175px);
+  }
+  40% {
+    left: calc(50% + 125px);
+    top: calc(50% - 25px);
+  }
+  55% {
+    left: calc(50% - 25px);
+    top: calc(50% + 125px);
+  }
+  70% {
+    left: calc(50% - 175px);
+    top: calc(50% - 25px);
+  }
+  85% {
+    left: calc(50% - 25px);
+    top: calc(50% - 175px);
+  }
+  100% {
+    background-color: #ff8a41;
+    left: 0;
+    top: 0;
+  }
+}
+
+@keyframes orbit-move-small-cc{
+
+  0% {
+    background-color:  #ff8a41;
+    left: 0;
+    top: 0;
+  }
+  20%{
+    left: -90px;
+    top: 210px;
+  }
+  40% {
+
+    left: 100px;
+    top: 250px;
+  }
+  60%{
+    left: 100px;
+    top: 250px;
+  }
+  80% {
+    left: 200px;
+    top: -60px;
+  }
+  100%{
+    background-color: rgba(140,82,255,1);
+    left: 0;
+    top: 0;
   }
 }
