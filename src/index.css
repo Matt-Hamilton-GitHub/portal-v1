@@ -11,14 +11,14 @@ body , html{
     #f6f6f6 93%
     
   );
-
+overflow-x: hidden;
 
 }
 
 
 
 hr{
-  width: 100vw;
+  width: 90vw;
 }
 
 h1{

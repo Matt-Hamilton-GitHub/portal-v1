@@ -3,7 +3,7 @@ import styled from 'styled-components'
 
 //assets
 import profileVideo from '../assets/video/profile-video-v1.mp4'
-import profileImg from '../assets/img/profile-image.svg'
+import profileImg from '../assets/img/profile-image-cl.jpg'
 import crown from '../assets//img/crown.png'
 import desktop from '../assets/img/desktop.svg'
 

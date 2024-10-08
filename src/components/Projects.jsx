@@ -40,8 +40,6 @@ z-index: 2;
 background-color:#8d64e0;
 margin-bottom: -10px ;
 box-shadow: inset 10px 9px 2px -17px rgba(255, 255, 255, 0.75);
-overflow: hidden;
-
 
 .dummy-start{
   width: 300px;
@@ -57,6 +55,8 @@ h1{
 line-height: 50px;
 font-family: 'Bungee Shade', cursive;
 user-select: none;
+color: #000000;
+
 
 }
 
@@ -101,6 +101,7 @@ user-select: none;
   animation-timeline: view();
   animation-range:enter enter;
   z-index: 10;
+ 
 }
 
 .projects-div{
@@ -124,7 +125,7 @@ user-select: none;
 }
 }
 
-@media (max-width: 750px){
+@media (max-width: 850px){
   width: 100vw;
   .dummy-start{
     display: none;

@@ -6,6 +6,7 @@ import CourseItem from './CourseItem'
 
 import ucbCourses from '../assets/data_base/courseUCB'
 import ucb from '../assets/img/uc b.jpg'
+import a_p from '../assets/icons/a-p.svg'
 
 
 export const Education = () => {
@@ -35,9 +36,9 @@ export const Education = () => {
         </div>
   
         <div className="berkeley-img">
+            
             <img src={ucb} alr='UC Berkeley' />
         </div>
-
         <div className="ucb-desc">
                 <h2>UC Berkeley</h2>
             <h3>
@@ -253,10 +254,13 @@ top: -1px;
   font-family: 'Bungee Shade', cursive;
   user-select: none;
   position: relative;
-  animation: fade-in-title cubic-bezier(.81,.36,.3,.81);
+  /* animation: fade-in-title cubic-bezier(.81,.36,.3,.81);
   animation-timeline: view();
-  animation-range:enter enter;
+  animation-range:enter exit; */
+  font-size: 45px;
   z-index: 10;
+
+
 }
 
 .custom-shape-divider-1 {
@@ -329,7 +333,7 @@ top: -1px;
 }
 
 
-@media (max-width: 750px){
+@media (max-width: 850px){
 
     .berkeley-img::after{
     content: '';

@@ -4,12 +4,8 @@ import styled from 'styled-components'
 
 //assets
 
-import profileImg from '../assets/img/profile-image.svg'
+import profileImg from '../assets/img/profile-image-removebg-preview-cl.png'
 import bear from '../assets/img/bear.svg'
-
-
-
-
 
 
 
@@ -33,7 +29,7 @@ import bear from '../assets/img/bear.svg'
        
     }
 
-// generateTitle();
+generateTitle();
 
   return (
     <Wrapper>
@@ -85,6 +81,8 @@ flex-wrap: wrap;
 align-items: center;
 z-index: 1;
 
+overflow-x: hidden;
+
 
 
 
@@ -123,24 +121,6 @@ path{
     
 }
 
- /* .custom-shape-divider-bottom-1705205650 {
-    position: relative;
-    bottom: 0;
-    left:0;
-    width: 100%;
-    height: 200px;
-    overflow: hidden; 
-    transform: rotate(180deg);
-    z-index: 30000000;
-}
-
-.custom-shape-divider-bottom-1705205650 svg {
-    position: absolute;
-    width: 200%; 
-    height: 200px; 
-    margin-left: -100%; /
-    animation: wave-animation 15s infinite linear;
-}  */
 
 .custom-shape-divider-title-page .shape-fill {
     fill: #8D64E0;
@@ -194,6 +174,7 @@ path{
     width: 90vw;
     z-index:100;
     user-select: none;
+  
 
 }
 
@@ -208,7 +189,7 @@ path{
     background: linear-gradient(338deg, rgba(140,82,255,1) 2%, #ff8a41 99%);
     border-radius: 90px;
     box-shadow:  0px 0px 63px -14px rgba(0, 0, 0, 1);
-    animation: rotate-around 6s cubic-bezier(.81,.36,.3,.81) infinite;
+    animation: rotate-around 3s cubic-bezier(.81,.36,.3,.81) infinite;
    
 }
 
@@ -216,10 +197,12 @@ path{
 .profile-logo > .profile-img {
     position: relative;
     border: solid 2px black;
-    border-radius: 90%;
-    width: 200px;
+    border-radius: 210px;
+    max-width:20vw;
+    min-width:200px;
     z-index:10;
     pointer-events: none;
+    
 }
 
 .cal-div{
@@ -228,6 +211,7 @@ path{
     right: 10px;
     top: 0;
     margin: 10px;
+   
     
 }
 
@@ -235,7 +219,7 @@ path{
     position: relative;
     display: flex;
     justify-content: center;
-
+    font-weight:900;
     align-items: center;
     font-family: 'Poiret One', sans-serif;
   
@@ -247,6 +231,11 @@ path{
     
 }
 
-
+@media (max-width: 850px){
+height: 850px;
+.title-div > h1 {
+    margin-bottom: 150px;
+}
+}
 
 `
