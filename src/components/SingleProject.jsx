@@ -8,6 +8,7 @@ export const SingleProject = ({item}) => {
   return (
    
 <Wrapper>
+        <a href={url}>
         <div className='project'>
             <div className='proj-img'>
             <img src={img} alt={name} />
@@ -21,6 +22,7 @@ export const SingleProject = ({item}) => {
                 })}
             </div> 
             </div>           
+            </a>
     </Wrapper>
 
   )
@@ -57,7 +59,8 @@ h5{
     margin: -1px 0px; 
     padding: 0px;
     white-space: wrap;
-    font-size: 15px;
+    font-size: 20px;
+    font-weight: 900;
     border-bottom: 1px black solid;
     width: 100%;
 }
@@ -121,6 +124,11 @@ img{
    
 }
 
+a {
+    text-decoration: none;
+    color: black;
+}
+
 
 @media (max-width: 850px){
 
@@ -175,6 +183,8 @@ img{
 h5{
 
     font-size: 13px;
+    font-weight: 6600;
+
 
 }
 }

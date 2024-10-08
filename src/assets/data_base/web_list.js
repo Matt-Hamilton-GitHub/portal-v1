@@ -68,23 +68,23 @@ const websites_list = [
     The system operates on the Netlify cloud infrastructure and incorporates secure and seamless payment processing capabilities.
       `
   },
-  {
-    id: 22,
-    name: "Ddoskis Drinks",
-    tags: [
-      <DiReact size={25} />,
-      <GoDatabase size={20} />,
+  // {
+  //   id: 22,
+  //   name: "Ddoskis Drinks",
+  //   tags: [
+  //     <DiReact size={25} />,
+  //     <GoDatabase size={20} />,
 
       
-    ],
-    url: "https://ddoskis-drinks.netlify.app/",
-    img: ddoski_drinks,
-    desc:
-    ` The E-commerce venture is built using the React framework. 
-    All the information presented on the website is dynamically retrieved through an API integration. 
-    The system operates on the Netlify cloud infrastructure and incorporates secure and seamless payment processing capabilities.
-      `
-  },
+  //   ],
+  //   url: "#/",
+  //   img: ddoski_drinks,
+  //   desc:
+  //   ` The E-commerce venture is built using the React framework. 
+  //   All the information presented on the website is dynamically retrieved through an API integration. 
+  //   The system operates on the Netlify cloud infrastructure and incorporates secure and seamless payment processing capabilities.
+  //     `
+  // },
 
   {
     id: 1,

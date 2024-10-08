@@ -9,7 +9,7 @@ const CourseItem = (item) => {
     
   return (
     <Wrapper>
-        <IoIosAdd size={20} styled={{'cursor':'pointer'}}/>
+        {/* <IoIosAdd size={20} styled={{'cursor':'pointer'}}/> */}
         <p>{title}</p>
     </Wrapper>
   )
