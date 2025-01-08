@@ -1,77 +1,70 @@
-import React, {useState} from 'react'
+import React, { useState } from 'react'
 import styled from 'styled-components'
 
-
 //assets
-
-import profileImg from '../assets/img/profile-image-removebg-preview-cl.png'
+import profileImg from '../assets/img/title-img-circle-nbg.png'
 import bear from '../assets/img/bear.svg'
 
 
 
- const TitlePage = () => {
+const TitlePage = () => {
     const TITLE = 'MATT'
     const INTERVAL = 500;
     const [title, setTitle] = useState('')
 
 
     const generateTitle = () => {
-        setTimeout(() =>{
+        setTimeout(() => {
             const inv = setInterval(() => {
-     
                 if (title.length !== TITLE.length) {
-                  setTitle(title + TITLE[title.length]);
-                } 
+                    setTitle(title + TITLE[title.length]);
+                }
                 clearInterval(inv);
-               
-              }, INTERVAL);
+
+            }, INTERVAL);
         }, 600)
-       
+
     }
 
-generateTitle();
+    generateTitle();
 
-  return (
-    <Wrapper>
-<div className='animation-container'>
-<div className="custom-shape-divider-title-page">
-    <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none" width="100%">
-        <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" className="shape-fill"></path>
-    </svg>
-</div>
-    
+    return (
+        <Wrapper>
+            <div className='animation-container'>
+                <div className="custom-shape-divider-title-page">
+                    <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none" width="100%">
+                        <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" className="shape-fill"></path>
+                    </svg>
+                </div>
 
-</div>
-        <div className="title-main-section"> 
-           <div className="title-div">
-     
-                <h1>MATT <b>HAMILTON</b></h1>
-               
-            
-                <div className="profile-logo">
-                    <img className='profile-img' src={profileImg} alt='profile' />
-                    <div className="cal-div">
-                         <span className='golden-bear-slogan'>Go Bears!</span>
-                    <img className='golden-bear' src={bear} alt='golden bear' />
-                    </div>
-                    
-                </div> 
+
             </div>
-        </div>
+            <div className="title-main-section">
+                <div className="title-div">
+
+                    <h1>MATT <b>HAMILTON</b></h1>
+
+                    <div className="profile-logo">
+                        <img className='profile-img' src={profileImg} alt='profile' />
+                        <div className="cal-div">
+                            <span className='golden-bear-slogan'>Go Bears!</span>
+                            <img className='golden-bear' src={bear} alt='golden bear' />
+                        </div>
+
+                    </div>
+                </div>
+            </div>
 
 
-    </Wrapper>
-   
-  )
+        </Wrapper>
+
+    )
 }
 
 export default TitlePage
 
 const Wrapper = styled.div`
 position: relative;
-width: 100vw;
-
-height: 1000px;
 
 display:flex;
 justify-content: center;
@@ -82,8 +75,6 @@ align-items: center;
 z-index: 1;
 
 overflow-x: hidden;
-
-
 
 
 .custom-shape-divider-title-page{
@@ -129,13 +120,14 @@ path{
 
 
 .title-div > h1 {
-    display: inline-block;
+    display: block;
     position: relative;
     width: 100%;
     margin-top: 50px;
     /* right: 10%; */
     font-weight: 400;
     font-size: 2.5rem;
+    padding: 30px;
 
 
 /* font-family: 'Gruppo', sans-serif; */
@@ -182,15 +174,16 @@ path{
 .profile-logo::before{
     content: "";
     position: relative;
-    width: 150px;
-    height: 150px;
-    top: 110px;
-    left: -20px;
+    width: 90px;
+    height: 90px;
+    top: 70px;
+    left: 40px;
     background: linear-gradient(338deg, rgba(140,82,255,1) 2%, #ff8a41 99%);
     border-radius: 90px;
     box-shadow:  0px 0px 63px -14px rgba(0, 0, 0, 1);
     animation: rotate-around 3s cubic-bezier(.81,.36,.3,.81) infinite;
-   
+    z-index: -100;
+    
 }
 
 
@@ -198,10 +191,11 @@ path{
     position: relative;
     border: solid 2px black;
     border-radius: 210px;
-    max-width:20vw;
-    min-width:200px;
+    max-width:17vw;
+    min-width: 150px;
     z-index:10;
     pointer-events: none;
+    background-color:rgba(255, 255, 255, 0.43);
     
 }
 
@@ -227,15 +221,22 @@ path{
 
 .golden-bear {
     position: relative;
-    width: 50px;
+    width: 120px;
     
 }
 
 @media (max-width: 850px){
 height: 850px;
 .title-div > h1 {
-    margin-bottom: 150px;
+    margin-bottom: 70px;
 }
+
+.golden-bear {
+    position: relative;
+    width: 80px;
+    
+}
+
 }
 
 `

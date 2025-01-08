@@ -1,8 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
-import { SingleProject } from './SingleProject'
 import projectsData from '../assets/data_base/web_list'
-import  { SingleProjectOrig }from './SingleProjectOrig'
+import SingleProject from './SingleProject'
 
 function Projects() {
   return (
@@ -11,9 +10,10 @@ function Projects() {
 <div className='main-projects-div'>
      <h1>Projects</h1>
  </div>
+     
 
-<div className="projects-div">
     <div className="projects">
+
      <div className="dummy-start"></div>
         {projectsData.map((item, idx)=>{
           return(
@@ -21,8 +21,7 @@ function Projects() {
           )
         })}
            <div className="dummy-end"></div>
-           
-    </div>
+
 </div>
   </Wrapper>
    
@@ -30,8 +29,6 @@ function Projects() {
 }
 
 export default Projects
-
-
 
 const Wrapper = styled.div`
 
@@ -49,6 +46,19 @@ box-shadow: inset 10px 9px 2px -17px rgba(255, 255, 255, 0.75);
 .dummy-end{
   width: 300px;
   height: 300px;
+}
+
+.bg-deco {
+position: absolute;
+
+top: 200px;
+left: 0;
+background-color: rgba(255, 255, 255, 0.8);
+width: 70vw;
+height: 900px;
+border-radius: 0 60% 90% 0;
+
+box-shadow: 5px -10px 20px -7px black;
 }
 
 h1{
@@ -153,5 +163,8 @@ color: #000000;
   
     
 }
+    .bg-deco{
+ display: none;
+    }
 }
 `

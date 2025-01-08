@@ -1,12 +1,10 @@
 
 import React from 'react'
 import styled from 'styled-components'
-
 import CourseItem from './CourseItem'
-
 import ucbCourses from '../assets/data_base/courseUCB'
 import ucb from '../assets/img/uc b.jpg'
-import a_p from '../assets/icons/a-p.svg'
+
 
 
 export const Education = () => {
@@ -37,7 +35,7 @@ export const Education = () => {
   
         <div className="berkeley-img">
             
-            <img src={ucb} alr='UC Berkeley' />
+            <img src={ucb} alt='UC Berkeley' />
         </div>
         <div className="ucb-desc">
                 <h2>UC Berkeley</h2>
@@ -200,15 +198,7 @@ font-family: 'Bungee Outline', cursive; */
     // border-bottom: 1px solid black
 }
 .courses{
-    position: relative;
-    padding: 10px;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 100px;
-    
+   width:80vw;
 }
 
 hr{
@@ -278,7 +268,7 @@ top: -1px;
     display: block;
     width: calc(100% + 1.3px);
     height: 220px;
-    animation: wave-animation 15s infinite linear;
+    animation: wave-animation 10s infinite linear;
     
 }
 

@@ -11,8 +11,10 @@ body , html{
     #f6f6f6 93%
     
   );
-overflow-x: hidden;
 
+  /* background-color: rgb(255, 255, 255); */
+overflow-x: hidden;
+background-image: url('./assets/patterns/bg-1.webp');
 }
 
 
@@ -53,6 +55,7 @@ hr{
   width: 50vw;
   position: relative;
   right: 50%;
+  
 }
 
 .title-div{
@@ -334,3 +337,17 @@ hr{
     top: 0;
   }
 }
+
+@keyframes fade {
+  0% {
+    background: rgba(140, 82, 255, 1) ;
+  }
+  50% {
+    background:  rgb(238, 147, 90);
+  }
+  100% {
+    background: rgba(140, 82, 255, 1);
+  }
+}
+
+

@@ -3,13 +3,14 @@ import styled from 'styled-components'
 
 export const SingleProject = ({item}) => {
 
-    const { name, url,img, desc , tags} = item;
+    const { name, url,img, tags} = item;
 
   return (
    
 <Wrapper>
         <a href={url}>
         <div className='project'>
+        
             <div className='proj-img'>
             <img src={img} alt={name} />
             </div>
@@ -28,10 +29,10 @@ export const SingleProject = ({item}) => {
   )
 }
 
+export default SingleProject
 
 const Wrapper = styled.div`
     
-
 @supports(animation-timeline: view()){
     animation: zoom-in-project linear;
     animation-timeline: view();
