@@ -113,13 +113,29 @@ font-family: 'Bungee Outline', cursive; */
 }
 
 .ucb-desc > h2 {
-    font-weight: 900;
+    font-weight: bold;
+    font-size: 25px;
     font-family: 'Nixie One', system-ui;
-  
+    background-color: #ff8a41;
+    border-radius: 25px 25px 0 0;
+    padding: 10px;
+    margin: 0;
+    border: 1px solid black;
+    border-bottom: 0;
+}
+
+.ucb-desc > h3 {
+    
+    background-color:rgba(124, 61, 251, 0.14);
+    border-radius: 0 0 25px 25px;
+    padding: 10px ;
+    margin: 0;
+    border: 1px solid black;
 }
 
 .course-work-section > h3 {
     font-weight: 900;
+   
 }
 
 .berkeley-img{
@@ -135,8 +151,10 @@ font-family: 'Bungee Outline', cursive; */
 }
 
 .ucb-desc{
+
  width: 80vw;  
  max-width: 70vw;
+
 }
 
 .berkeley-img > img{
@@ -198,7 +216,8 @@ font-family: 'Bungee Outline', cursive; */
     // border-bottom: 1px solid black
 }
 .courses{
-   width:80vw;
+   max-width:60vw;
+
 }
 
 hr{
