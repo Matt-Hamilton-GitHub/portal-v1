@@ -3,7 +3,7 @@ import React, {useEffect} from 'react';
 import Projects from './components/Projects';
 import TitlePage from './components/TitlePage';
 import Footer from './components/Footer';
-import PortfolioEducation from './components/PortfolioEducation ';
+import Education from './components/Education ';
 import Navbar from './components/Navbar';
 import Experience from './components/Experience';
 
@@ -32,8 +32,7 @@ function App() {
       <Navbar />
       <TitlePage /> 
       <Projects />
-      {/* <Education /> */}
-      <PortfolioEducation />
+      <Education />
       <Experience />
       <Footer />
 

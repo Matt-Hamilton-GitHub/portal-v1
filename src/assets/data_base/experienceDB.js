@@ -21,8 +21,8 @@ const experience = [
             'Demonstrated adaptability by learning and integrating new tools and technologies into projects, fostering a proactive and solution-oriented approach.'
         ]
 }, {
-    title: 'UC Berkeley - Instructor, Full Stack Development & Technologies',
-    place: 'Rauuser College of Natural Resources',
+    title: 'Instructor - Full Stack Development & Technologies',
+    place: 'Cubstart (DeCal)',
     work_period: 'Aug 2023 – Dec 2023',
     achivements: 
 
@@ -36,8 +36,8 @@ const experience = [
         ]
 },
 {
-    title: 'Flamingo Ai - LLM Coding Trainer',
-    place: 'Rauuser College of Natural Resources',
+    title: 'LLM Coding Trainer',
+    place: 'Flamingo Ai',
     work_period: 'May 2024 – Aug 2024',
     achivements: 
         [

@@ -15,7 +15,7 @@ const ExperienceItem = ({ item }) => {
         <span> <h4>{work_period}</h4></span>
         <div className="item-description">
           {achivements.map((item, idx) => {
-            return (<span>+ <p key={idx}>{item}</p></span>)
+            return (<span><p key={idx}>{item}</p></span>)
           })}
         </div>
       </div>
@@ -26,34 +26,39 @@ const ExperienceItem = ({ item }) => {
 export default ExperienceItem
 
 const Wrapper = styled.div`
+
 display: flex;
 position: relative;
-justify-content: flex-start;
-align-items: start;
+justify-content: start;
+align-items: flex-start;
 padding: 0 20px;
 flex-direction: column;
-border-left: 2px solid white;
+border-left: 10px solid white;
 
 .job-title::before{
 position: relative;
 display: inline-block;
 top: 3pc;
-right: 35px;
+right: 40px;
 background-color: rgb(255, 255, 255);
 content: ' ';
 min-width: 20px;
 min-height: 20px;
 border-radius: 50%;
 padding: 5px;
-box-shadow: 1px 2px 1px 1px rgb(92, 92, 92);
+// box-shadow: 1px 1px 3px 1px rgb(0, 0, 0);
 
 }
 
 .job-title {
   display: flex;
-  justify-content: flex-start;
+  justify-content: start;
   flex-direction: column;
-  align-items: start;
+  align-items: flex-start;
+
+  margin-top: -50px;
+}
+  
  
 }
 
@@ -68,10 +73,10 @@ h4 {
 padding-left: 25px;
 font-size: .8pc;
 font-weight: 700;
+color: rgb(0, 0, 0);
 }
 .description {
-
-padding: 0 90px 0 10px;
+  padding: 0 30px 30px 10px;
 }
 
 .description > .item-description{
@@ -86,9 +91,11 @@ padding-left: 50px;
   gap: 10px;
 }
 
+
 span{
 font-weight: bold;
 }
+
 .item-description >span{
 display: flex;
 flex-direction: row;
@@ -96,6 +103,7 @@ align-items: center;
 gap: 5px;
 
 }
+
 p{
 background-color: rgb(255, 255, 255);
 padding: 10px;
@@ -104,15 +112,16 @@ font-weight: 600;
 // color: var(--main-golden);
 box-shadow: inset 1px 1px 5px 1px rgb(0,0,0);
 letter-spacing: 2px;
-    
-
+  
 }
+
+
 
 
 @media (max-width: 850px){
 
 .job-title::before{
-  top: 2pc;
+  top: 2.2pc;
   min-width: 10px;
   min-height: 10px;
   right: 30px;
@@ -130,10 +139,10 @@ font-weight: 900;
 }
 
 h4 {
-font-size: .7pc;
+font-size: .8pc;
 }
 
-p {font-size: .9pc;}
+p {font-size: .75pc;}
 
 
 `

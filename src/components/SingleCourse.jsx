@@ -35,7 +35,7 @@ span{
     flex-direction: row;
     justify-content: start;
     align-items: center;
-    gap: 10px;
+    gap: 5px;
 }
     h4{olor: rgb(0, 0, 0);font-weight: 900;}
 

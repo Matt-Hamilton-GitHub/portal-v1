@@ -112,7 +112,7 @@ const coursesUCB =
        lang: [<FaPython size={25} />]
        },
        {
-        title: "OOP",
+        title: "Oject Oriented Programming",
         desc: `C/Pyhton programming course covers fundamental concepts like data types
          , variables, control structures (if-else, loops), functions, arrays, 
          pointers, file handling, and memory management, allowing students to 

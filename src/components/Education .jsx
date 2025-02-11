@@ -1,13 +1,11 @@
 
 import React from 'react'
 import styled from 'styled-components'
-import CourseItem from './CourseItem'
 import ucbCourses from '../assets/data_base/courseUCB'
-import ucb from '../assets/img/uc b.jpg'
 import { FaGraduationCap } from "react-icons/fa";
 import SingleCourse from './SingleCourse'
 
-export const Education = () => {
+const Education = () => {
     return (
         <Wrapper id='education'>
             <div className="main-section">
@@ -28,7 +26,6 @@ export const Education = () => {
                         )
                     })}
                 </div>
-
             </div>
 
 

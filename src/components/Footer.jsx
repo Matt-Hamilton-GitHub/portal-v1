@@ -14,7 +14,7 @@ const Footer = () => {
                 </div>
             </div>
             <div className="social-links">
-               
+               <h5>All Rights Reserved</h5>
             </div>
 
         </Wrapper>
@@ -27,17 +27,20 @@ export default Footer
 const Wrapper = styled.div`
 
 height: 100px;
-background: rgb(141,100,224);
-background: linear-gradient(0deg, rgba(141,100,224,1) 5%, rgba(255,138,65,1) 90%);
-
 display: flex;
 position: relative;
 justify-content: center;
-align-items: center;
+align-items: end;
 
 
 .social-links{
     display: flex;
+    position: relative;
+    top: 100px;
+    width: 100vw;
+    justify-content: end;
+    align-items: center;
+    flex-direction: column;
     gap: 25px;
 }
 
@@ -61,10 +64,11 @@ align-items: center;
 }
 
 .custom-shape-divider-3 .shape-fill {
-    fill: #ff8a41;
+    fill: rgba(41,200,191,1);
 }
 
 .adjust-3{
-bottom: 100px;
+bottom: -109px;
+transform: rotate(180deg);
 }
 `
