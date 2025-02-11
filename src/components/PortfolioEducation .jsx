@@ -50,6 +50,8 @@ flex-direction: column;
 background: rgb(141,100,224);
 background: linear-gradient(0deg, rgba(141,100,224,1) 21%, rgba(255,138,65,1) 100%);
 padding-bottom: 300px;
+margin-top: -2px;
+z-index: 50;
 }
 
 h1{

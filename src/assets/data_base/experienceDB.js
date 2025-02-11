@@ -2,7 +2,7 @@ const experience = [
 {
     title: 'Jr Software Engineer',
     place: 'Rausser College of Natural Resources',
-    work_period: '1 year 5 months',
+    work_period: 'Aug 2023 – Dec 2024',
     achivements: 
         [
             'Achieved heightened expertise in Node.js, ReactJS, and Express by developing scalable full-stack applications; optimized API performance and enhanced frontend responsiveness.',
@@ -23,7 +23,7 @@ const experience = [
 }, {
     title: 'UC Berkeley - Instructor, Full Stack Development & Technologies',
     place: 'Rauuser College of Natural Resources',
-    work_period: '5 months',
+    work_period: 'Aug 2023 – Dec 2023',
     achivements: 
 
         [ 
@@ -38,7 +38,7 @@ const experience = [
 {
     title: 'Flamingo Ai - LLM Coding Trainer',
     place: 'Rauuser College of Natural Resources',
-    work_period: '4 months',
+    work_period: 'May 2024 – Aug 2024',
     achivements: 
         [
            'Achieved strengthened problem-solving abilities as measured by improved AI performance, by providing AI with complex challenges and refining its problem-solving capabilities and accuracy. ',

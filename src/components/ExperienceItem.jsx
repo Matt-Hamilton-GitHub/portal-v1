@@ -11,10 +11,11 @@ const ExperienceItem = ({ item }) => {
         <h2>{title}</h2>
       </div>
       <div className="description">
-        <span><MdOutlinePlace size={20}/><h3>{place} - {work_period}</h3></span>
+        <span><MdOutlinePlace size={20}/><h3>{place}</h3></span>
+        <span> <h4>{work_period}</h4></span>
         <div className="item-description">
           {achivements.map((item, idx) => {
-            return (<p key={idx}>{item}</p>)
+            return (<span>+ <p key={idx}>{item}</p></span>)
           })}
         </div>
       </div>
@@ -63,6 +64,11 @@ font-weight: bold;
 padding-left: 15px;
 }
 
+h4 {
+padding-left: 25px;
+font-size: .8pc;
+font-weight: 700;
+}
 .description {
 
 padding: 0 90px 0 10px;
@@ -83,14 +89,21 @@ padding-left: 50px;
 span{
 font-weight: bold;
 }
+.item-description >span{
+display: flex;
+flex-direction: row;
+align-items: center;
+gap: 5px;
 
+}
 p{
 background-color: rgb(255, 255, 255);
 padding: 10px;
 border-radius: 10px;
 font-weight: 600;
 // color: var(--main-golden);
-box-shadow: inset 1px 1px 1px 1px rgb(0,0,0);
+box-shadow: inset 1px 1px 5px 1px rgb(0,0,0);
+letter-spacing: 2px;
     
 
 }
@@ -112,9 +125,14 @@ p{
 h2{font-size: 1.2pc;}
 
 h3{
-font-size: .7pc;
+font-size: .9pc;
 font-weight: 900;
 }
+
+h4 {
+font-size: .7pc;
+}
+
 p {font-size: .9pc;}
 
 
