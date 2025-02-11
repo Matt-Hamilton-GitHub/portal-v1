@@ -5,26 +5,33 @@ import SingleProject from './SingleProject'
 
 function Projects() {
   return (
-  <Wrapper>
-    
-<div className='main-projects-div'>
-     <h1>Projects</h1>
- </div>
-     
+    <Wrapper id='projects'>
 
-    <div className="projects">
+      <div className='main-projects-div'>
+        <div className="section-title-container">
+          {/* <span><FaBriefcase size={50} /></span> */}
+          <h1>Projects</h1>
+        </div>
+      </div>
 
-     <div className="dummy-start"></div>
-        {projectsData.map((item, idx)=>{
-          return(
+      <div className="projects">
+        {projectsData.map((item, idx) => {
+          return (
             <SingleProject key={idx} item={item} />
           )
         })}
-           <div className="dummy-end"></div>
 
+        <div className="dummy"></div>
+      </div>
+
+      {/* <div className='animation-container adjust-1'>
+  <div className="custom-shape-divider-1">
+    <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+        <path d="M985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.26-17.34-168.06-16.33-250.45.39-57.84,11.73-114,31.07-172,41.86A600.21,600.21,0,0,1,0,27.35V120H1200V95.8C1132.19,118.92,1055.71,111.31,985.66,92.83Z" className="shape-fill"></path>
+    </svg>
 </div>
-  </Wrapper>
-   
+</div> */}
+    </Wrapper>
   )
 }
 
@@ -33,40 +40,18 @@ export default Projects
 const Wrapper = styled.div`
 
 position: relative;
-z-index: 2;
-background-color:#8d64e0;
-margin-bottom: -10px ;
+z-index: 20;
+background: rgb(141,100,224);
+background: linear-gradient(180deg, rgba(141,100,224,1) 21%, rgba(255,138,65,1) 100%);
+padding-bottom: 100px ;
 box-shadow: inset 10px 9px 2px -17px rgba(255, 255, 255, 0.75);
 
-.dummy-start{
-  width: 300px;
-  height: 30px;
-}
-
-.dummy-end{
-  width: 300px;
-  height: 300px;
-}
-
-.bg-deco {
-position: absolute;
-
-top: 200px;
-left: 0;
-background-color: rgba(255, 255, 255, 0.8);
-width: 70vw;
-height: 900px;
-border-radius: 0 60% 90% 0;
-
-box-shadow: 5px -10px 20px -7px black;
-}
-
 h1{
-line-height: 50px;
-font-family: 'Bungee Shade', cursive;
-user-select: none;
-color: #000000;
-
+  font-family: 'Bungee Shade', cursive;
+  user-select: none;
+  font-size: 3pc;
+  letter-spacing: 15px;
+  color: #000000;
 
 }
 
@@ -75,21 +60,21 @@ color: #000000;
   display: flex;
   justify-content: center;
   text-align: center;
-  margin-bottom: 10vh;  
+  padding-bottom: 10vh;  
   width:100vw;
+  z-index: 1;
 }
 
 .projects{
-    padding: 200px 0;
+    padding: 100px 0;
     display: block;
     position: relative;
-    overflow-x: hidden;
-    height: 600px;
+    overflow: auto;
+    height: 500px;
     width: 100vw;
     white-space: nowrap;
-    z-index: 5;
+    z-index: 20;
     padding-bottom: 100px;
-  
     
 }
 
@@ -107,10 +92,10 @@ color: #000000;
 
 .main-projects-div > h1 {
   position: relative;
-  animation: fade-in-title cubic-bezier(.81,.36,.3,.81);
-  animation-timeline: view();
-  animation-range:enter enter;
-  z-index: 10;
+  // animation: fade-in-title cubic-bezier(.81,.36,.3,.81);
+  // animation-timeline: view();
+  // animation-range:enter enter;
+  
  
 }
 
@@ -121,9 +106,38 @@ color: #000000;
   text-align: center;
   position: relative;
   width: 100vw;
-  margin-top: 100px;
   z-index:20;
   
+}
+
+
+.dummy {
+height: 200px;
+width: 200px;
+}
+
+.custom-shape-divider-1 {
+    position: relative;
+    top: -1px;
+    left: -15vw;
+    width: 150vw;
+    transform: rotate(180deg);
+    z-index: 27;
+ 
+}
+
+.custom-shape-divider-1 svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 220px;
+    animation: wave-animation 10s infinite linear;
+    
+}
+
+.custom-shape-divider-1 .shape-fill {
+    fill: #ff8a41;
+    
 }
 
 
@@ -137,16 +151,10 @@ color: #000000;
 
 @media (max-width: 850px){
   width: 100vw;
-  .dummy-start{
-    display: none;
-}
-
-.dummy-end{
-  display: none;
-}
 
 .projects{
-    padding: 0;
+    padding: 50px 0;
+    padding-left: 30px;
     margin: 0;
     width: 90vw;
     height: 500px;
@@ -155,16 +163,19 @@ color: #000000;
     position: relative;
     justify-content: center;
     flex-wrap: wrap;
-    gap: 15px;
+    gap: 25px;
     align-items: center;
     text-align: center;
     flex-direction: row;
-    
-  
+
+    overflow-x: hidden;
+}
+
+h1 {
+    font-size: 2pc;
     
 }
-    .bg-deco{
- display: none;
-    }
+
+
 }
 `

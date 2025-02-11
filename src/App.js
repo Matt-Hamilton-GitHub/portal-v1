@@ -1,15 +1,18 @@
 
 import React, {useEffect} from 'react';
-import Education from './components/Education';
 import Projects from './components/Projects';
 import TitlePage from './components/TitlePage';
+import Footer from './components/Footer';
+import PortfolioEducation from './components/PortfolioEducation ';
+import Navbar from './components/Navbar';
+import Experience from './components/Experience';
+
 
 function App() {
 
   const progressBar = () =>
 
   { 
-
     let totalHeight = document.body.scrollHeight - window.innerHeight;
   
     window.onscroll = function () {
@@ -18,7 +21,6 @@ function App() {
     };
   }
 
-  
     useEffect(()=>{
         setTimeout(progressBar(),3)
     })
@@ -27,9 +29,14 @@ function App() {
     <>
       <div id="progressbar"></div>
       <div id="scrollPath"></div> 
+      <Navbar />
       <TitlePage /> 
       <Projects />
-      <Education />
+      {/* <Education /> */}
+      <PortfolioEducation />
+      <Experience />
+      <Footer />
+
     </>
   );
 }

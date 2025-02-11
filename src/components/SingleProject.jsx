@@ -37,6 +37,8 @@ const Wrapper = styled.div`
     animation: zoom-in-project linear;
     animation-timeline: view();
     animation-range: contain cover;
+    z-index: 1;
+    position: relative;
 
 } 
 
@@ -47,7 +49,7 @@ const Wrapper = styled.div`
     height: 170px;
     margin: 100px 0;
     border-radius: 20px 5px;
-    z-index: 100;
+    z-index: 10;
     overflow: hidden;
     display: flex;
     justify-content: center;

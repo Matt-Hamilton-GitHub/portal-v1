@@ -72,6 +72,13 @@ const coursesUCB =
          lang: [ <DiRuby size={25} />, <FaGithubSquare size={25} />, <MdDeveloperMode size={25} />]
        },
        {
+        title: "UX/IU Design",
+        desc: `Ideas and techniques for designing, developing, and modifying large software systems. Service-oriented architecture, behavior-driven design with user stories,
+         cloud computing, test-driven development, automated testing, cost and quality metrics for maintainability and effort estimation, practical performance and security 
+         in software operations, design patterns and refactoring, specification and documentation, agile project team organization and management.`,
+         lang: [ <DiRuby size={25} />, <FaGithubSquare size={25} />, <MdDeveloperMode size={25} />]
+       },
+       {
         title: "Modern Cryptography",
        desc: `Cryptography or cryptology is the science of designing algorithms and protocols for enabling parties to communicate and compute securely 
        in an untrusted environment (e.g. secure communication, digital signature, etc.) Over the last four decades, cryptography has transformed from an ad hoc collection
