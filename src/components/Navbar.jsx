@@ -2,7 +2,7 @@ import React, {useState, useEffect} from 'react'
 import styled from 'styled-components'
 import { FaGithub, FaLinkedin } from "react-icons/fa6";
 
-const MIN_WIDTH = 920;
+const MIN_WIDTH = 650;
 
 const Navbar = () => {
 
@@ -23,13 +23,13 @@ const Navbar = () => {
             <div className="nav-logo"><h2> <span style={{color:'var(--main-golden)'}}>Golden</span> Bear Lair</h2></div>
             {windowWidth ?
             <div className="page-navigation">
-                <a href='#projects'><h3>Projects</h3></a>
-                <a href='#education'><h3>Education</h3></a>
-                <a href='#experience'><h3>Experience</h3></a>
+                <a href='#projects'>Projects</a>
+                <a href='#education'>Education</a>
+                <a href='#experience'>Experience</a>
             </div> : null }
             <div className="social-links">
-                <span ><a href="https://github.com/Matt-Hamilton-GitHub" ><FaGithub color='rgb(12, 68, 118)' size={35} /></a></span>
-                <span><a href="https://www.linkedin.com/in/matt-hamilton-6a1037210/" ><FaLinkedin color='rgb(12, 68, 118)' size={35} /></a></span>
+                <span ><a href="https://github.com/Matt-Hamilton-GitHub" ><FaGithub color='rgb(12, 68, 118)' size={windowWidth ? 35: 25} /></a></span>
+                <span><a href="https://www.linkedin.com/in/matt-hamilton-6a1037210/" ><FaLinkedin color='rgb(12, 68, 118)' size={windowWidth ? 35: 25} /></a></span>
             </div>
         </Wrapper>
     )
@@ -55,6 +55,7 @@ padding: 25px;
 
 .nav-logo > h2 {
 font-size: 25px;
+text-wrap: nowrap;
 }
 
 .page-navigation {
@@ -72,8 +73,7 @@ font-size: 25px;
 .social-links{
     display: flex;
     gap: 25px;
-    padding: 20px;
-    
+    padding: 20px; 
 }
 
 h2{
@@ -81,27 +81,17 @@ h2{
   color: var( --secondary-bear-blue);
 }
 
-h3{
-    color: var( --secondary-bear-blue);
-}
-
-a > h3{
-padding: 10px;
-transform: * 0.4;
-
-}
-a > h3:hover {
-border-bottom: 7px solid var( --secondary-bear-blue); }
-}
-
 @media (max-width: 850px){
 .nav-logo > h2 {
 font-size: 20px;
+padding-
 }
-
+.nav-logo{
+    padding-left: 5px;
+}
 .page-navigation {
     gap: 10px;
 }
-
+}
 
 `

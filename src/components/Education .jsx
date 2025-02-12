@@ -1,16 +1,30 @@
 
-import React from 'react'
+import React, {useState, useEffect} from 'react'
 import styled from 'styled-components'
 import ucbCourses from '../assets/data_base/courseUCB'
 import { FaGraduationCap } from "react-icons/fa";
 import SingleCourse from './SingleCourse'
 
+const MIN_WIDTH = 850;
+
 const Education = () => {
+
+     const [windowWidth, setWindowWidth] = useState(window.innerWidth > MIN_WIDTH)
+    
+        const handleWindowWidthChange = () => {
+            setWindowWidth(window.innerWidth > MIN_WIDTH)
+        }
+    
+        useEffect(()=>{
+            handleWindowWidthChange()
+            window.addEventListener("resize", handleWindowWidthChange)
+            return () => window.removeEventListener("resize", handleWindowWidthChange)
+        }, [])
     return (
         <Wrapper id='education'>
             <div className="main-section">
                 <div className="section-title-container">
-                    <h1> Educ<span><FaGraduationCap size={45} /></span>ation</h1>
+                    <h1> Educ<span><FaGraduationCap size={windowWidth ? 45: 25} /></span>ation</h1>
                     <h2>BS in Computer Science & Electrical Engineering</h2>
                 </div>
             </div>
@@ -80,13 +94,13 @@ h3 {color: rgb(6, 6, 6);}
 
 @media (max-width: 850px){
     
-h1 {font-size: 2pc;}
+h1 {font-size: 1.7pc;}
 
  h1 > span {
     position: absolute;
-    right: 47vw;
-    top: -10px;
-    size: 10px;
+    right: calc(48.7%);
+    top: 0;
+    
 }
     h2{font-size: .9pc;}
 }      

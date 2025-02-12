@@ -27,20 +27,16 @@ export default Footer
 const Wrapper = styled.div`
 
 height: 100px;
+background: rgb(255, 255, 255);
+
 display: flex;
 position: relative;
 justify-content: center;
-align-items: end;
+align-items: center;
 
 
 .social-links{
     display: flex;
-    position: relative;
-    top: 100px;
-    width: 100vw;
-    justify-content: end;
-    align-items: center;
-    flex-direction: column;
     gap: 25px;
 }
 
@@ -64,11 +60,10 @@ align-items: end;
 }
 
 .custom-shape-divider-3 .shape-fill {
-    fill: rgba(41,200,191,1);
+    fill:rgb(255, 255, 255);
 }
 
 .adjust-3{
-bottom: -109px;
-transform: rotate(180deg);
+bottom: 100px;
 }
 `

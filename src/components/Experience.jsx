@@ -59,7 +59,7 @@ h1{
 @media (max-width: 850px){
 
 h1 {
-    font-size: 2pc;
+    font-size: 1.7pc;
 }
 
 }
