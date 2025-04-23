@@ -1,8 +1,8 @@
 const experience = [
 {
-    title: 'Jr Software Engineer',
+    title: 'Software Engineer',
     place: 'Rausser College of Natural Resources',
-    work_period: 'Aug 2023 – Dec 2024',
+    work_period: 'Aug 2023 – Present',
     achivements: 
         [
             'Achieved heightened expertise in Node.js, ReactJS, and Express by developing scalable full-stack applications; optimized API performance and enhanced frontend responsiveness.',
@@ -47,6 +47,17 @@ const experience = [
         ]
 },
 
+{
+    title: 'Junior Software Engineer',
+    place: 'Yolantis',
+    work_period: 'May 2018 – Aug 2021',
+    achivements: 
+        [
+           'Achieved enhanced user experience by developing dynamic user interfaces using React.js and Next.js, resulting in a 25% increase in user engagement. ',
+            'Improved application performance and SEO by implementing best practices such as lazy loading, server-side rendering (SSR), and static site generation (SSG), leading to a 30% reduction in page load times.',            'Enhanced data retrieval efficiency by integrating RESTful and GraphQL APIs, leading to a 20% improvement in data fetching speed and application responsiveness',
+            'Optimized global state management using tools like Redux, Zustand, and React Context, contributing to a 15% eduction in application bugs and improved maintainability.'
+        ]
+}
 ]
 
 

@@ -6,7 +6,7 @@ import { MdOutlinePlace } from "react-icons/md";
 const ExperienceItem = ({ item }) => {
   const { title, place, work_period, achivements } = item
   return (
-    <Wrapper>
+    <Wrapper >
       <div className="job-title">
         <h2>{title}</h2>
       </div>
@@ -15,7 +15,7 @@ const ExperienceItem = ({ item }) => {
         <span> <h4>{work_period}</h4></span>
         <div className="item-description">
           {achivements.map((item, idx) => {
-            return (<span><p key={idx}>{item}</p></span>)
+            return (<span key={idx}><p>{item}</p></span>)
           })}
         </div>
       </div>
@@ -55,7 +55,6 @@ padding: 5px;
   justify-content: start;
   flex-direction: column;
   align-items: flex-start;
-
   margin-top: -50px;
 }
   
@@ -65,9 +64,10 @@ padding: 5px;
 h2{
 letter-spacing: 2px;
 color: rgb(255, 255, 255);
-font-weight: bold;
+font-weight: 900;
 padding-left: 15px;
 }
+
 
 h4 {
 padding-left: 25px;

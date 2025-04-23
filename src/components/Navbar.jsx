@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from 'react'
+import React, {useState, useEffect, useRef} from 'react'
 import styled from 'styled-components'
 import { FaGithub, FaLinkedin } from "react-icons/fa6";
 
@@ -12,9 +12,15 @@ const Navbar = () => {
         setWindowWidth(window.innerWidth > MIN_WIDTH)
     }
 
+    let canvesRef = useRef(null)
+
     useEffect(()=>{
         handleWindowWidthChange()
         window.addEventListener("resize", handleWindowWidthChange)
+        const canvas = canvesRef.current;
+        if (canvas) {
+            console.log(canvas.getContext('2d'))             
+        }
         return () => window.removeEventListener("resize", handleWindowWidthChange)
     }, [])
 
@@ -38,11 +44,22 @@ const Navbar = () => {
 export default Navbar
 
 const Wrapper = styled.div`
+position: relative;
 display: flex;
 justify-content: space-between;
 width: 100vw;
 height: 70px;
 gap: 25px;
+
+&:after {
+content: " " ;
+position: absolute;
+display: inline-block;
+bottom: -100%;
+width: 1000px;
+heigh: 10px;
+background-color: var(--main-golden);
+}
 
 .nav-logo{
 

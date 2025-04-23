@@ -30,8 +30,6 @@ const TitlePage = () => {
 
     return (
         <Wrapper id='title-page'>
-
-
             <div className="title-main-section">
                 <div className="title-div">
                     <img className='golden-bear' src={bear} alt='golden bear' />
@@ -47,13 +45,6 @@ const TitlePage = () => {
                 </div>
                 {/* <button type='sumbit' className='custom-btn'>Contact</button> */}
             </div>
-
-            {/* <div className="navigate-up">
-                <a href='#title-page'>
-                    <FaAngleDoubleUp size={25} color={'var(--secondary-bear-blue)'} />
-                </a>
-            </div> */}
-
 
             <div className="custom-shape-divider-title-page">
                 <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none" width="100%">
