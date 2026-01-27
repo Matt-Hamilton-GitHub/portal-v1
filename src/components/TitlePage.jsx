@@ -37,14 +37,14 @@ const TitlePage = () => {
                     <h3>{jobTitle}</h3>
                 </div>
 
+                </div>
                 <div className="profile-logo">
                     <img className='profile-img' src={profileImg} alt='profile' />
-                    <div className="cal-div">
-                        <span className='golden-bear-slogan'>Go Bears!</span>
-                    </div>
-                </div>
                 {/* <button type='sumbit' className='custom-btn'>Contact</button> */}
             </div>
+                <div className="cal-div">
+                        <span className='golden-bear-slogan'><h3>Go Bears!</h3></span>
+                </div>
 
             {/* <div className="custom-shape-divider-title-page">
                 <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none" width="100%">
@@ -72,10 +72,10 @@ height: 85vh;
 // overflow-x: hidden;
 
 
-
 .title-div {
 margin: 70px 10px ;
 user-select: none;
+
 
 }
 
@@ -85,11 +85,19 @@ user-select: none;
     position: relative;
     width: 100%;
     /* right: 10%; */
-    font-weight:3pc;
+    font-weight: 400;
+    font-size: 4pc;
+   
     color: var(--secondary-bear-blue);
     letter-spacing: 15px;
+    font-family: "Bungee", sans-serif;
+    text-shadow: rgba(140,82,255,0.7) 4px 3px 1px;
 }
 
+.title-div > h3 {
+font-weight: 600;
+
+}
 .title-div h3::after{
     content: "}";
     position: relative;
@@ -110,7 +118,7 @@ user-select: none;
    
     
     text-align: center;
-    width: 90vw;
+    width: 400px
     z-index:100;
     user-select: none;
 }
@@ -118,14 +126,14 @@ user-select: none;
 .profile-logo::before{
     content: "";
     position: relative;
-    width: 90px;
-    height: 90px;
-    top: 70px;
-    left: 40px;
+    width: 190px;
+    height: 190px;
+    top: 140px;
+    left: 0px;
     background: linear-gradient(338deg, rgba(140,82,255,1) 2%, #ff8a41 99%);
-    border-radius: 90px;
+    border-radius: 40px;
     box-shadow:  0px 0px 63px -14px rgba(0, 0, 0, 1);
-    animation: rotate-around 3s cubic-bezier(.81,.36,.3,.81) infinite;
+    animation: rotate-around 5s cubic-bezier(.81,.36,.3,.81) infinite;
     z-index: -100;
     
 }
@@ -133,16 +141,20 @@ user-select: none;
 
 .profile-logo > .profile-img {
     position: relative;
-    border: solid 2px black;
-    border-radius: 210px;
-    max-width:17vw;
+    // border: solid 2px black;
+    // border-radius: 210px;
+    max-width:40vw;
     min-width: 190px;
     z-index:10;
     pointer-events: none;
-    background-color:rgba(255, 255, 255, 0.43);
+    background-color:rgba(255, 255, 255, 0.3);
+    
     
 }
+.glass-div{
+background-color:rgba(000, 000, 000, 0.6);
 
+}
 
 .cal-div{
     display: block;
@@ -157,15 +169,16 @@ user-select: none;
     position: relative;
     display: flex;
     justify-content: center;
-    font-weight:900;
+    font-weight: 100;
     align-items: center;
-    font-family: 'Poiret One', sans-serif;
+    
+    padding: 0 10px;
   
 }
 
 .golden-bear {
     position: relative;
-    width: 120px;
+    width: 70px;
     pointer-events: none;
     
 }

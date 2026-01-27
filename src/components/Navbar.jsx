@@ -1,42 +1,54 @@
-import React, {useState, useEffect, useRef} from 'react'
-import styled from 'styled-components'
+import React, { useState, useEffect } from "react";
+import styled from "styled-components";
 import { FaGithub, FaLinkedin } from "react-icons/fa6";
 
 const MIN_WIDTH = 650;
 
 const Navbar = () => {
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth > MIN_WIDTH);
 
-    const [windowWidth, setWindowWidth] = useState(window.innerWidth > MIN_WIDTH)
+  const handleWindowWidthChange = () => {
+    setWindowWidth(window.innerWidth > MIN_WIDTH);
+  };
 
-    const handleWindowWidthChange = () => {
-        setWindowWidth(window.innerWidth > MIN_WIDTH)
-    }
- 
+  useEffect(() => {
+    handleWindowWidthChange();
+    window.addEventListener("resize", handleWindowWidthChange);
+    return () => window.removeEventListener("resize", handleWindowWidthChange);
+  }, []);
 
-    useEffect(()=>{
-        handleWindowWidthChange()
-        window.addEventListener("resize", handleWindowWidthChange)
-        return () => window.removeEventListener("resize", handleWindowWidthChange)
-    }, [])
+  return (
+    <Wrapper>
+      <div className="nav-logo">
+        <h2>
+          {" "}
+          <span style={{ color: "var(--main-golden)" }}>Golden</span> Bear Lair
+        </h2>
+      </div>
+      {windowWidth ? (
+        <div className="page-navigation">
+          <a href="#projects">Projects</a>
+          <a href="#education">Education</a>
+          <a href="#experience">Experience</a>
+        </div>
+      ) : null}
+      <div className="social-links">
+        <span>
+          <a href="https://github.com/Matt-Hamilton-GitHub">
+            <FaGithub color="rgb(12, 68, 118)" size={windowWidth ? 35 : 25} />
+          </a>
+        </span>
+        <span>
+          <a href="https://www.linkedin.com/in/matt-hamilton-v/">
+            <FaLinkedin color="rgb(12, 68, 118)" size={windowWidth ? 35 : 25} />
+          </a>
+        </span>
+      </div>
+    </Wrapper>
+  );
+};
 
-    return (
-        <Wrapper>
-            <div className="nav-logo"><h2> <span style={{color:'var(--main-golden)'}}>Golden</span> Bear Lair</h2></div>
-            {windowWidth ?
-            <div className="page-navigation">
-                <a href='#projects'>Projects</a>
-                <a href='#education'>Education</a>
-                <a href='#experience'>Experience</a>
-            </div> : null }
-            <div className="social-links">
-                <span ><a href="https://github.com/Matt-Hamilton-GitHub" ><FaGithub color='rgb(12, 68, 118)' size={windowWidth ? 35: 25} /></a></span>
-                <span><a href="https://www.linkedin.com/in/matt-hamilton-v/" ><FaLinkedin color='rgb(12, 68, 118)' size={windowWidth ? 35: 25} /></a></span>
-            </div>
-        </Wrapper>
-    )
-}
-
-export default Navbar
+export default Navbar;
 
 const Wrapper = styled.div`
 position: relative;
@@ -78,15 +90,23 @@ text-wrap: nowrap;
     align-items: center;
     text-align: center;
     gap: 30px;
-
     
 }
 
 .social-links{
     display: flex;
+    justify-content: space-evenly;
     gap: 25px;
+    width: 150px;
     padding: 20px; 
-}
+    // background: #ff8a41;
+    // box-shadow:  14px 5px 7px -10px #000;
+    // border-bottom-left-radius: 300px;
+    // border-bottom-right-radius: 20px;
+    // padding: 20px 30px 70px 30px;
+    // border-left: 2px solid rgb(12, 68, 118);
+    // border-bottom: 2px solid rgb(12, 68, 118);
+}   
 
 h2{
   font-family: 'Poiret One', sans-serif; 
@@ -96,7 +116,7 @@ h2{
 @media (max-width: 850px){
 .nav-logo > h2 {
 font-size: 20px;
-padding-
+
 }
 .nav-logo{
     padding-left: 5px;
@@ -106,4 +126,4 @@ padding-
 }
 }
 
-`
+`;

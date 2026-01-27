@@ -49,9 +49,9 @@ box-shadow: inset 10px 9px 2px -17px rgba(255, 255, 255, 0.75);
 h1{
   font-family: 'Bungee Shade', cursive;
   user-select: none;
-  font-size: 3pc;
-  letter-spacing: 15px;
-  color: #000000;
+  font-size: 2pc;
+  letter-spacing: 10px;
+  color: var(--main-golden);
 
 }
 
@@ -66,11 +66,12 @@ h1{
 }
 
 .section-title-container{
+margin-top: 20px;
 background: white;
-padding: 10px 20px;
-border-bottom-left-radius: 100px;
-border-bottom-right-radius: 100px;
-box-shadow: inset 10px 9px 2px -17px rgba(255, 255, 255, 0.75);
+padding: 0 50px;
+border-radius: 100px;
+
+box-shadow: inset 1px 9px 5px -7px var(--main-golden);
 
 
 }

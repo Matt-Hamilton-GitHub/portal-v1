@@ -164,14 +164,27 @@ hr {
 /* Animations */
 
 @keyframes rotate-around {
-  from {
+  0%{
     transform: rotate(0deg);
+    border-radius: 40px;
 
   }
 
-  to {
+  25% {
     transform: rotate(360deg);
+    border-radius: 120px;
+  
+  }
+  50%{
+    transform: rotate(0deg);
+    border-radius: 120px;
+    
+  }
 
+  100% {
+    transform: rotate(360deg);
+    border-radius: 40px;
+  
   }
 
 }

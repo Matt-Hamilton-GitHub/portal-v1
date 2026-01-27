@@ -31,10 +31,10 @@ function App() {
       <div id="scrollPath"></div> 
       <Navbar />
       <TitlePage /> 
-      <Projects />
+      {/* <Projects />
       <Education />
       <Experience />
-      <Footer />
+      <Footer /> */}
 
     </>
   );
