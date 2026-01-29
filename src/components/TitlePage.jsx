@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import styled from 'styled-components'
 
 //assets
-import profileImg from '../assets/img/title-img-circle-nbg.png'
+import profileImg from '../assets/img/title-img-circle.png'
 import bear from '../assets/img/bear.svg'
 
 const TitlePage = () => {
@@ -32,7 +32,6 @@ const TitlePage = () => {
         <Wrapper id='title-page'>
             <div className="title-main-section">
                 <div className="title-div">
-                    <img className='golden-bear' src={bear} alt='golden bear' />
                     <h1>MATT <b>HAMILTON</b></h1>
                     <h3>{jobTitle}</h3>
                 </div>
@@ -43,6 +42,7 @@ const TitlePage = () => {
                 {/* <div className="cal-div">
                         <span className='golden-bear-slogan'><h3>Go Bears!</h3></span>
                         </div> */}
+                        <img className='golden-bear' src={bear} alt='golden bear' />
             </div>
                         </div>
 
@@ -73,7 +73,7 @@ height: 85vh;
 
 
 .title-div {
-margin: 70px 10px ;
+margin: 10px ;
 user-select: none;
 
 
@@ -92,12 +92,17 @@ user-select: none;
     letter-spacing: 15px;
     font-family: "Bungee", sans-serif;
     text-shadow: rgba(140,82,255,0.7) 4px 3px 1px;
+    background-color:rgba(255, 255, 255, 0.5);
+     box-shadow:  5px 5px 3px -14px rgba(0, 0, 0, 1);
 }
 
 .title-div > h3 {
 font-weight: 600;
+background-color:rgba(255, 255, 255, 0.5);
+padding: 5px 0px 5px 5px;
 
 }
+
 .title-div h3::after{
     content: "}";
     position: relative;
@@ -115,6 +120,7 @@ font-weight: 600;
     align-items: center;
     flex-direction: column;
     margin: 25px;
+    
    
     
     text-align: center;
@@ -123,7 +129,7 @@ font-weight: 600;
     user-select: none;
 }
 
-.profile-logo::before{
+.title-div::before{
     content: "";
     position: relative;
     width: 190px;
@@ -133,7 +139,7 @@ font-weight: 600;
     background: linear-gradient(338deg, rgba(140,82,255,1) 2%, #ff8a41 99%);
     border-radius: 40px;
     box-shadow:  0px 0px 63px -14px rgba(0, 0, 0, 1);
-    animation: rotate-around 5s cubic-bezier(.81,.36,.3,.81) infinite;
+    animation: rotate-around 10s ease-in-out infinite;
     z-index: -100;
     
 }
@@ -141,16 +147,18 @@ font-weight: 600;
 
 .profile-logo > .profile-img {
     position: relative;
-    // border: solid 2px black;
-    // border-radius: 210px;
-    max-width:40vw;
-    min-width: 190px;
+    //border: solid 5px  rgba(140,82,255,1) ;
+    //border-radius: 20px;
+    max-width: 80vw;
+    height: 320px;
+    min-width: 30vw;
     z-index:10;
     pointer-events: none;
     background-color:rgba(255, 255, 255, 0.3);
-    
-    
+    object-fit: cover;
+    filter: grayscale(100%)
 }
+    
 .glass-div{
 background-color:rgba(000, 000, 000, 0.6);
 
@@ -178,8 +186,11 @@ background-color:rgba(000, 000, 000, 0.6);
 
 .golden-bear {
     position: relative;
-    width: 70px;
+    width: 90px;
     pointer-events: none;
+    
+    border-radius: 50px;
+    padding: 5px;
     
 }
 
