@@ -37,14 +37,14 @@ const TitlePage = () => {
                     <h3>{jobTitle}</h3>
                 </div>
 
-                </div>
                 <div className="profile-logo">
                     <img className='profile-img' src={profileImg} alt='profile' />
                 {/* <button type='sumbit' className='custom-btn'>Contact</button> */}
-            </div>
-                <div className="cal-div">
+                {/* <div className="cal-div">
                         <span className='golden-bear-slogan'><h3>Go Bears!</h3></span>
-                </div>
+                        </div> */}
+            </div>
+                        </div>
 
             {/* <div className="custom-shape-divider-title-page">
                 <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none" width="100%">
