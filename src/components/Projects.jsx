@@ -47,12 +47,15 @@ padding-bottom: 300px ;
 box-shadow: inset 10px 9px 2px -17px rgba(255, 255, 255, 0.75);
 
 h1{
-  font-family: 'Bungee Shade', cursive;
+  // font-family: 'Bungee Shade', cursive;
+  font-family: "Bungee", sans-serif;
   user-select: none;
-  font-size: 2pc;
+  font-size: 2.5pc;
   letter-spacing: 10px;
-  color: var(--main-golden);
-
+  color: var(--secondary-bear-blue);
+  box-shadow: inset inset 10px 9px 2px -17px rgba(00, 255, 255, 0.75); 
+  text-shadow: rgba(255,138,65,1)4px 3px 1px;
+  padding: 0 50px;
 }
 
 .main-projects-div {
@@ -66,12 +69,11 @@ h1{
 }
 
 .section-title-container{
-margin-top: 20px;
+margin-top: 0;
 background: white;
-padding: 0 50px;
-border-radius: 100px;
 
-box-shadow: inset 1px 9px 5px -7px var(--main-golden);
+border-radius: 0 0 50px 50px ;
+// box-shadow: inset 1px 9px 5px -7px var(--main-golden);
 
 
 }

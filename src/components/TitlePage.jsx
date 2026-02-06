@@ -1,74 +1,70 @@
-import React, { useState } from 'react'
-import styled from 'styled-components'
+import React, { useState } from "react";
+import styled from "styled-components";
 
 //assets
-import profileImg from '../assets/img/title-img-circle.png'
-import bear from '../assets/img/bear.svg'
+import profileImg from "../assets/img/profile-image-removebg-preview-cl-4-rgl.jpg";
+import bear from "../assets/img/bear.svg";
 
 const TitlePage = () => {
+  const [jobTitle, setJobTitle] = useState("");
 
-    const [jobTitle, setJobTitle] = useState('')
+  const generateTitle = () => {
+    const value = "Software Engineering & Cybersecurity";
+    const interval = 100;
 
+    setTimeout(() => {
+      const inv = setInterval(() => {
+        if (jobTitle.length !== value.length) {
+          setJobTitle(jobTitle + value[jobTitle.length]);
+        }
+        clearInterval(inv);
+      });
+    }, interval);
+  };
 
-    const generateTitle = () => {
+  generateTitle();
 
-        const value = 'Software Engineering & Cybersecurity'
-        const interval = 100;
+  return (
+    <Wrapper id="title-page">
+      <div className="title-main-section">
+        <div className="title-div">
+          <h1>
+            MATT <b>HAMILTON</b>
+          </h1>
+          <h3>{jobTitle}</h3>
+        </div>
 
-        setTimeout(() => {
-            const inv = setInterval(() => {
-                if (jobTitle.length !== value.length) {
-                    setJobTitle(jobTitle + value[jobTitle.length]);
-                }
-                clearInterval(inv);
-            });
-        }, interval)
+        {/* <div className="profile-div">
+            
+          <img className="profile-img" src={profileImg} alt="profile" />
+          <p >
+            I am a software engineer who likes turning messy ideas into scalable
+            systems and stubborn bugs into learning opportunities. I build
+            software with one rule in mind: keep it simple, make it efficient,
+            and design it to be secure from day one. That's my credo.
+          </p>
+            
+        </div>
+          <img className="golden-bear" src={bear} alt="golden bear" /> */}
+      </div>
+    </Wrapper>
+  );
+};
 
-    }
-
-    generateTitle();
-
-    return (
-        <Wrapper id='title-page'>
-            <div className="title-main-section">
-                <div className="title-div">
-                    <h1>MATT <b>HAMILTON</b></h1>
-                    <h3>{jobTitle}</h3>
-                </div>
-
-                <div className="profile-logo">
-                    <img className='profile-img' src={profileImg} alt='profile' />
-                {/* <button type='sumbit' className='custom-btn'>Contact</button> */}
-                {/* <div className="cal-div">
-                        <span className='golden-bear-slogan'><h3>Go Bears!</h3></span>
-                        </div> */}
-                        <img className='golden-bear' src={bear} alt='golden bear' />
-            </div>
-                        </div>
-
-            {/* <div className="custom-shape-divider-title-page">
-                <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none" width="100%">
-                    <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" className="shape-fill"></path>
-                </svg>
-            </div> */}
-
-        </Wrapper>
-
-    )
-}
-
-export default TitlePage
+export default TitlePage;
 
 const Wrapper = styled.div`
 position: relative;
 display:flex;
-justify-content: center;
+justify-content: start;
 flex-direction: column;
 text-align: center;
 flex-wrap: wrap;
 align-items: center;
 z-index: 100;
-height: 85vh;
+height: 80vh;
+transition: 
+
 // overflow-x: hidden;
 
 
@@ -93,7 +89,7 @@ user-select: none;
     font-family: "Bungee", sans-serif;
     text-shadow: rgba(140,82,255,0.7) 4px 3px 1px;
     background-color:rgba(255, 255, 255, 0.5);
-     box-shadow:  5px 5px 3px -14px rgba(0, 0, 0, 1);
+    box-shadow:  5px 5px 3px -14px rgba(0, 0, 0, 1);
 }
 
 .title-div > h3 {
@@ -113,13 +109,16 @@ padding: 5px 0px 5px 5px;
     animation: fade-black 1s linear infinite;
 }
 
- .profile-logo {
+ .profile-div {
     position: relative;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
-    flex-direction: column;
+    flex-direction: row;
     margin: 25px;
+    max-width: 800px;
+
+    
     
    
     
@@ -132,12 +131,12 @@ padding: 5px 0px 5px 5px;
 .title-div::before{
     content: "";
     position: relative;
-    width: 190px;
-    height: 190px;
+    width: 150px;
+    height: 150px;
     top: 140px;
     left: 0px;
     background: linear-gradient(338deg, rgba(140,82,255,1) 2%, #ff8a41 99%);
-    border-radius: 40px;
+    border-radius: 100px;
     box-shadow:  0px 0px 63px -14px rgba(0, 0, 0, 1);
     animation: rotate-around 10s ease-in-out infinite;
     z-index: -100;
@@ -145,18 +144,27 @@ padding: 5px 0px 5px 5px;
 }
 
 
-.profile-logo > .profile-img {
+.profile-div > .profile-img {
     position: relative;
-    //border: solid 5px  rgba(140,82,255,1) ;
-    //border-radius: 20px;
+    border: solid 2px  black;
+ 
     max-width: 80vw;
-    height: 320px;
-    min-width: 30vw;
+    height: 220px;
+    width: 220px;
     z-index:10;
     pointer-events: none;
     background-color:rgba(255, 255, 255, 0.3);
     object-fit: cover;
-    filter: grayscale(100%)
+    filter: grayscale(100%);
+    border-radius: 300px;
+     
+}
+.profile-div > p {
+font-weight: 600;
+text-align: start;
+padding: 25px;
+letter-spacing: 4px;
+line-height: 1.5;
 }
     
 .glass-div{
@@ -228,7 +236,9 @@ height: 850px;
     width: 80px;
 
 }
-
+// .profile-logo > .profile-img {
+//    border-radius: 200px;
+// }
 }
 
 .custom-btn {
@@ -307,4 +317,4 @@ height: 850px;
     fill: #8D64E0;
 }
 
-`
+`;
